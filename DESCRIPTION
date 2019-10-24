@@ -12,7 +12,7 @@ License: Creative Commons (CC)
 Encoding: UTF-8
 LazyData: true
 Imports:
-    dabestr
-    igraph
-    ggplot2
+    dabestr,
+    igraph,
+    ggplot2 (>= 3.0)
 RoxygenNote: 6.1.1
