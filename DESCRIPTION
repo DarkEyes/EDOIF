@@ -11,9 +11,14 @@ Description: EDOIF is  non-parametric  framework  based on  Esitmation Statistic
 License: Creative Commons (CC)
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 3.5.0),
+    boot,
+    distr 
 Imports:
     dabestr,
     igraph,
-    distr,
+    rlang,
+    simpleboot,
     ggplot2 (>= 3.0)
 RoxygenNote: 6.1.1
