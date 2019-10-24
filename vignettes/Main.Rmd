@@ -1,0 +1,227 @@
+---
+title: "R Notebook"
+output: html_notebook
+Developer: C. Amornbunchornvej
+Email: chainarong.amo@nectec.or.th
+Date: Sep-02-2019
+---
+Text
+Dependency: packages("dabestr,ellipsis,boot,simpleboot,ellipsis,igraph,ggplot2")
+
+
+Text: Simple Simulation & ordering inference
+```{r}
+# Simulation section
+nInv<-100
+initMean=10
+stepMean=20
+std=8
+simData1<-c()
+simData1$Values<-rnorm(nInv,mean=initMean,sd=std)
+simData1$Group<-rep(c("C1"),times=nInv)
+simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+3,sd=std) )
+simData1$Group<-c(simData1$Group,rep(c("C2"),times=nInv))
+simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+3*stepMean,sd=std) )
+simData1$Group<-c(simData1$Group,rep(c("C3"),times=nInv) )
+simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+2*stepMean,sd=std) )
+simData1$Group<-c(simData1$Group, rep(c("C4"),times=nInv) )
+simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+4*stepMean,sd=std) )
+simData1$Group<-c(simData1$Group, rep(c("C5"),times=nInv) )
+
+# Simple ordering inference section
+library(EDOIF)
+# parameter setting
+bootT=1000 # Number of times of sampling with replacement
+alpha=0.05 # significance  significance level
+
+#======= input
+Values=simData1$Values
+Group=simData1$Group
+#=============
+A1<-EDOIF(Values,Group)
+A1 # print results in text
+plot(A1)
+```
+
+
+Text: Non-normal-Distribution Simulation & ordering inference   (running cell)
+```{r}
+library(distr)
+library(EDOIF)
+# parameter setting
+bootT=1000
+alpha=0.05
+nInv<-1500
+
+start_time <- Sys.time()
+#======= input
+simData3<-SimNonNormalDist(nInv=nInv,noisePer=0.01)
+Values=simData3$Values
+Group=simData3$Group
+#=============
+A3<-EDOIF(Values,Group, bootT=bootT, alpha=alpha, methodType ="perc")
+A3
+plot(A3)
+end_time <- Sys.time()
+end_time - start_time
+```
+
+Text: generating $A$ dominates $B$ with different degrees of uniform noise
+```{r}
+library(ggplot2)
+
+nInv<-1000
+simData3<-SimNonNormalDist(nInv=nInv,noisePer=0.01)
+#plot(density(simData3$V3))
+
+dat <- data.frame(dens = c(simData3$V3, simData3$V5)
+                   , lines = rep(c("B", "A"), each = nInv))
+#Plot.
+p1<-ggplot(dat, aes(x = dens, fill = lines)) + geom_density(alpha = 0.5) +xlim(-400, 400)+ ylim(0, 0.07) + ylab("Density [0,1]") +xlab("Values") + theme( axis.text.x = element_text(face="bold",  
+                                      size=20) )
+theme_update(text = element_text(face="bold", size=20)  )
+p1$labels$fill<-"Categories"
+plot(p1)
+
+
+```
+
+Test: 100 sims
+```{r}
+library(EDOIF)
+T=100 # Number of rounds
+# parameter setting
+bootT=1000
+alpha=0.05
+
+Bp<-numeric(T)
+Br<-numeric(T)
+Bf1<-numeric(T)
+
+Bf1ttest<-numeric(T)
+Bf1wilcox<-numeric(T)
+Mtmp<-list()
+nInv<-100
+noisePer<-0.00 # adjudge noise degree
+
+tableRes<-data.frame(matrix(0,5,3))
+for(i in seq(1,T))
+{
+  print(sprintf("Round %d",i))
+  simData3<-SimNonNormalDist(nInv,noisePer=noisePer)
+  filename = sprintf("~/R/OrderInference/Sim3Folder/simData3-%d.Rdata",i) 
+  save(simData3, file =filename )
+  load(file =filename )
+  A3<-EDOIF(simData3$Values,simData3$Group, bootT=bootT, alpha=alpha, methodType ="bca")
+  outttest<-pairwise.t.test(simData3$Values, simData3$Group,alternative =  "greater",p.adjust.method = "BY",pool.sd=TRUE)
+  
+  A4<-EDOIF(simData3$Values,simData3$Group, bootT=bootT, alpha=alpha, methodType ="perc")
+  
+  adjttestMat<-getttestDominantRADJ(A3$Values,A3$Group,A3$sortedGroupList,alpha)$adjMat
+  out1<-checkSim3Res(outttest$p.value<=alpha,flag=1)
+  out2<-checkSim3Res(adjttestMat,flag=0)
+  out3<-checkSim3Res(A3$adjBootMat,flag=0)
+  out4<-checkSim3Res(A4$adjBootMat,flag=0)
+  
+  out5<-checkSim3Res(A4$adjMat,flag=0)
+
+  Mtmp[[i]]<-A3$adjMat
+  
+  tableRes[1,]<-tableRes[1,]+c(out1$prec,out1$rec,out1$F1) # ttest with pool.sd
+  tableRes[2,]<-tableRes[2,]+c(out2$prec,out2$rec,out2$F1) # ttest
+  tableRes[3,]<-tableRes[3,]+c(out3$prec,out3$rec,out3$F1) # Bootstrap: BCa 
+  tableRes[4,]<-tableRes[4,]+c(out4$prec,out4$rec,out4$F1) # Bootstrap: perc
+  tableRes[5,]<-tableRes[5,]+c(out5$prec,out5$rec,out5$F1) # Mann-Whitney
+  
+  
+}
+
+tableRes<-tableRes/T
+for(i in seq(1,5))
+{
+  prec<-tableRes[i,1] 
+  rec<-tableRes[i,2]
+  F1<- 2*(prec*rec)/(prec+rec)
+  tableRes[i,3]<-F1
+}
+colnames(tableRes)[1]<-paste("Precision")
+colnames(tableRes)[2]<-paste("Recall")
+colnames(tableRes)[3]<-paste("F1 score") 
+rownames(tableRes)[1]<-paste("ttest with pool.sd")  
+rownames(tableRes)[2]<-paste("ttest")  
+rownames(tableRes)[3]<-paste("Bootstrap: BCa")  
+rownames(tableRes)[4]<-paste("Bootstrap: perc")  
+rownames(tableRes)[5]<-paste("EDOIF (Mann-Whitney)")  
+tableRes
+
+```
+
+khon kaen
+```{r}
+library(readr)
+library(EDOIF)
+Occp40 <- read_csv("~/R/OrderInference/Occp40.csv")
+# parameter setting
+bootT=1000
+alpha=0.05
+
+start_time <- Sys.time()
+DataT<-c()
+#======= input
+DataT$Values=Occp40[[1]]
+DataT$Group=Occp40[[2]]
+#=============
+#inxList<-unique(DataT$Group)
+#Prv40<-
+#      DataT %>%
+#      dabest(Group, Values,
+#             idx = inxList,
+#             paired = FALSE,
+#             reps =bootT,
+#             ci = 100* (1-alpha) )
+             
+Prv40<-EDOIF(DataT$Values,DataT$Group, bootT=bootT, alpha=alpha)
+Prv40
+plot(Prv40)
+end_time <- Sys.time()
+end_time - start_time
+```
+NASDAQ
+```{r}
+library(readr)
+library(EDOIF)
+NASDAQdata <- read_csv("~/OrderInference/NASDAQ00-14.csv")
+# parameter setting
+bootT=1000
+alpha=0.05
+
+start_time <- Sys.time()
+DataT<-c()
+#======= input
+className<-c("Finance","Industry&Tech","Materials","Service&LifeStyle","Computer")
+DataT$Values=NASDAQdata[[1]]
+DataT$Group=NASDAQdata[[2]]
+DataT$Group2<-c()
+for( i in seq(1,length(DataT$Group)))
+{
+  DataT$Group2[i]<-className[DataT$Group[i]]
+}
+#=============
+source("EDOIF.R")
+#inxList<-unique(DataT$Group)
+#Prv40<-
+#      DataT %>%
+#      dabest(Group, Values,
+#             idx = inxList,
+#             paired = FALSE,
+#             reps =bootT,
+#             ci = 100* (1-alpha) )
+             
+NDobj<-EDOIF(DataT$Values,DataT$Group2, bootT=bootT, alpha=alpha)
+NDobj
+plot(NDobj)
+end_time <- Sys.time()
+end_time - start_time
+
+```
+
