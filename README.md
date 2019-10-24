@@ -14,19 +14,24 @@ library(devtools)
 install_github('DarkEyes/EDOIF')
 
 # Examples
-
 library(EDOIF)
+
 #==parameter setting
+
 bootT=1000
+
 alpha=0.05
+
 nInv<-1500
 
-start_time <- Sys.time()
 #======= input
+
 simData3<-SimNonNormalDist(nInv=nInv,noisePer=0.01) # generating the simulation data
-Values=simData3$Values
-Group=simData3$Group
+
 #=============
-A3<-EDOIF(Values,Group, bootT=bootT, alpha=alpha, methodType ="perc") # Calling the class constructor
+
+A3<-EDOIF(simData3$Values,simData3$Grou, bootT=bootT, alpha=alpha, methodType ="perc") # Calling the class constructor
+
 print(A3) # print the results in text mode
+
 plot(A3) # print the results in graphic mode
