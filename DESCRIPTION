@@ -14,5 +14,6 @@ LazyData: true
 Imports:
     dabestr,
     igraph,
+    distr,
     ggplot2 (>= 3.0)
 RoxygenNote: 6.1.1
