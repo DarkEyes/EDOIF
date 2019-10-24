@@ -6,8 +6,9 @@ EDOIF is  non-parametric  framework  based on  Esitmation Statistics principle. 
 2) estimating  magnitude  of  difference  between  a  pair  of categories in forms of confidence intervals; and
 3) visualizing  domination  orders  and  magnitudes  of  dif-ference of categories.
 
-#Installation
+# Installation
 Please call the following commands in R terminal:
 
 library(devtools)
+
 install_github('DarkEyes/EDOIF')
