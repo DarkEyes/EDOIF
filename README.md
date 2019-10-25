@@ -1,4 +1,8 @@
-# Empirical Distribution Ordering Inference Framework (EDOIF)
+Empirical Distribution Ordering Inference Framework (EDOIF)
+===========================================================
+
+[![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
+
 
 EDOIF is  non-parametric  framework  based on  Esitmation Statistics principle. Its main purpose is to  infer orders of empirical distributions from different categories base on a probability of finding a value in one distribution that greater than the expectation of another distribution. Given a set of ordered-pair of real-category values the framework is capable of 
 
@@ -6,32 +10,33 @@ EDOIF is  non-parametric  framework  based on  Esitmation Statistics principle. 
 2) estimating  magnitude  of  difference  between  a  pair  of categories in forms of confidence intervals; and
 3) visualizing  domination  orders  and  magnitudes  of  dif-ference of categories.
 
-# Installation
+Installation
+------------
 Please call the following commands in R terminal:
 
+``` r
 library(devtools)
-
 install_github('DarkEyes/EDOIF')
+```
 
-# Examples
+
+Examples
+--------
+``` r
 library(EDOIF)
 
 #==parameter setting
-
 bootT=1000
-
 alpha=0.05
-
 nInv<-1500
 
 #======= input
-
 simData3<-SimNonNormalDist(nInv=nInv,noisePer=0.01) # generating the simulation data
 
-#=============
+# Calling the class constructor
+A3<-EDOIF(simData3$Values,simData3$Grou, bootT=bootT, alpha=alpha, methodType ="perc") 
 
-A3<-EDOIF(simData3$Values,simData3$Grou, bootT=bootT, alpha=alpha, methodType ="perc") # Calling the class constructor
-
+# Visualizing results
 print(A3) # print the results in text mode
-
 plot(A3) # print the results in graphic mode
+```
