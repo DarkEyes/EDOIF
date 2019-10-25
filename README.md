@@ -53,7 +53,7 @@ bootT=1000 # number of times of sample with replacement in bootstrap function.
 alpha=0.05 # Significance level
 
 #== Calling the class constructor
-A1<-EDOIF(simData1$Values,simData1$Grou, bootT=bootT, alpha=alpha, methodType ="perc") 
+A1<-EDOIF(simData1$Values,simData1$Group, bootT=bootT, alpha=alpha, methodType ="perc") 
 
 #== Visualizing results
 print(A1) # print the results in text mode
