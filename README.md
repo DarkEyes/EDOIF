@@ -61,11 +61,14 @@ plot(A1, fontSize=15) # print the results in graphic mode
 ```
 **Graphic mode results**
 1. An alpha-confidence-interval of mean plot for five categories. The horizontal axis represents categories and the vertical axis represents values within distributions of categories.
-![](man/FIG/MeanCI.png)
+
+<img src="https://github.com/DarkEyes/EDOIF/blob/master/man/FIG/MeanCI.png" width="500">
 2. A dominant-distribution  network  of  five categories. A node represents categories and an edge represents a dominant-distribution relation between categories. If there is an edge from category A to B, then A dominates B. A larger node size implies a higher mean value of a category. 
-![](man/FIG/DDnet.png)
+<img src="https://github.com/DarkEyes/EDOIF/blob/master/man/FIG/DDNet.png" width="500">
+
 3. An alpha-confidence-interval of mean difference plot for five categories.
-![](man/FIG/MeanDiffCI.png)
+<img src="https://github.com/DarkEyes/EDOIF/blob/master/man/FIG/MeanDiffCI.png" width="600">
+
 **Text mode results**
 
 ```
