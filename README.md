@@ -20,8 +20,8 @@ install_github('DarkEyes/EDOIF')
 ```
 
 
-Examples
---------
+Example: The inferring orders of categories based on their empirical distributions 
+----------------------------------------------------------------------------------
 ``` r
 library(EDOIF)
 
@@ -59,7 +59,14 @@ A1<-EDOIF(simData1$Values,simData1$Group, bootT=bootT, alpha=alpha, methodType =
 print(A1) # print the results in text mode
 plot(A1, fontSize=15) # print the results in graphic mode
 ```
-The result in text mode is as follows.
+**Graphic mode results**
+1. An alpha-confidence-interval of mean plot for five categories. The horizontal axis represents categories and the vertical axis represents values within distributions of categories.
+![](man/FIG/MeanCI.png)
+2. A dominant-distribution  network  of  five categories. A node represents categories and an edge represents a dominant-distribution relation between categories. If there is an edge from category A to B, then A dominates B. A larger node size implies a higher mean value of a category. 
+![](man/FIG/DDnet.png)
+3. An alpha-confidence-interval of mean difference plot for five categories.
+![](man/FIG/MeanDiffCI.png)
+**Text mode results**
 
 ```
 EDOIF (Empirical Distribution Ordering Inference Framework) v1.0
