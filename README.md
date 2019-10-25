@@ -20,7 +20,7 @@ install_github('DarkEyes/EDOIF')
 ```
 
 
-Example: The inferring orders of categories based on their empirical distributions 
+Example: Inferring orders of categories based on their empirical distributions 
 ----------------------------------------------------------------------------------
 ``` r
 library(EDOIF)
@@ -127,3 +127,7 @@ Mean difference of Category5 (n=150) minus Category3 (n=150): Category3 ≺ Cate
 Mean Diff:20.545888 95CI:[ 18.774437,22.396629]
 
 ```
+Contact
+=========
+- Developer: C. Amornbunchornvej<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-3131-0370" href="https://orcid.org/0000-0003-3131-0370" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-3131-0370</a></div>
+- Homepage: <a href="https://sites.google.com/view/amornbunchornvej/home">Link</a>
