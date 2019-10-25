@@ -20,8 +20,23 @@
 #'  The default is 0.05.
 #'@param methodType is an option for boostrapping methods:either  "perc" or "bca".
 #'   The "perc" is the default option.
-#'@return obj an object of EDOIF class that contains the results of ordering inference
-#'that can be print in text mode (print(obj)) or graphic mode (plot(obj))
+#'@return this class constructor returns an object of EDOIF class.
+#'
+#'\code{obj} an object of EDOIF class that contains the results of ordering inference
+#'that can be print in text mode (print(obj)) or graphic mode (plot(obj)).
+#'
+#'The \code{obj} consists of the following variables
+#'
+#'\item{Values, Group}{ The main inputs of the framework. They are the double and character vectors respectively. }
+#'\item{bootT, alpha, methodType}{ The number of bootstrapping, significance level, and boostrapping method parameters. }
+#'\item{sortedGroupList}{ The list of names of categories ascendingly ordered by their means. }
+#'\item{sortedmeanList}{ The list of means of categories that are ascendingly ordered. }
+#'\item{MegDiffList[[i]]}{ The mean difference confidence intervals and related information of all categories that have higher means than sortedGroupList[i] category. If methodType = "bca", then MegDiffList[[i]] is an object of dabestr class that can be used to create the Gardner-Altman plot.}
+#'\item{confInvsList[i,]}{ The mean confidence interval of sortedGroupList[i] category. confInvsList[i,1] is a lower bound and confInvsList[i,2] is an upper bound. }
+#'\item{adjMat[i,j]}{ An element of adjacency matrix: one if sortedGroupList[j] category dominates sortedGroupList[i] using Mann-Whitney test, otherwise zero. }
+#'\item{pValMat[i,j]}{ A p-value of Mann-Whitney test for adjMat[i,j]. }
+#'\item{adjDiffMat[i,j]}{ A lower bound of confidence interval of difference mean for sortedGroupList[j] minus sortedGroupList[i] using methodType bootstrap. }
+#'\item{adjBootMat[i,j]}{ One if adjDiffMat[i,j] is positive, otherwise, zero. }
 #'
 #'@exportPattern "^[^\\.]"
 #'@importFrom boot boot.ci
