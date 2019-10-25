@@ -13,9 +13,9 @@ Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 3.5.0),
-    boot,
-    distr 
+    boot
 Imports:
+    distr,
     dabestr,
     igraph,
     simpleboot,
