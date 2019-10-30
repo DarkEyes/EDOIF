@@ -3,7 +3,7 @@ Empirical Distribution Ordering Inference Framework (EDOIF)
 
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
 
-Given a dataset of careers and incomes, how large a difference of income between any pair of careers? Given a dataset of travel time records, how long do we need to spend more when choosing a public transportation mode <br>A</br> instead of <br>B</br> to travel? In this work, we developed a framework to solve these problems named "EDOIF".
+Given a dataset of careers and incomes, how large a difference of income between any pair of careers? Given a dataset of travel time records, how long do we need to spend more when choosing a public transportation mode A instead of B to travel? In this work, we developed a framework to solve these problems named "EDOIF".
 
 EDOIF is a non-parametric  framework  based on  Esitmation Statistics principle. Its main purpose is to  infer orders of empirical distributions from different categories base on a probability of finding a value in one distribution that greater than the expectation of another distribution. Given a set of ordered-pair of real-category values the framework is capable of 
 
