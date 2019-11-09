@@ -1,10 +1,26 @@
-diffMeanBoot <- function(Group,g1,g2,Values, indices) {
-  d1 <- data$data1[indices] # allows boot to select sample
-  return(mean(d))
-}
-
-
-
+#' getMegDiffConfInv function
+#'
+#' getMegDiffConfInv is a support function for bootstraping method.
+#' Its main purpose is to compute a mean-difference confidence intervals between all pair of distributions.
+#'
+#'@param Values is a vector of real-number values
+#'@param Group is a vector of categories of each real number in Values
+#'@param GroupList is a list of names of categories ascendingly ordered by their means.
+#'@param bootT is a number of times of sample with replacement for bootstraping.
+#'  The default is 1000. It must be above zero
+#'@param alpha is a significance level using in both confidence intervals and ordering inference it has the range [0,1].
+#'  The default is 0.05.
+#'@param methodType is an option for boostrapping methods:either  "perc" or "bca".
+#'   The "perc" is the default option.
+#'@return This function returns a list of mean-difference confidence intervals.
+#'
+#'\code{MegDiffList} a list of objects that contains mean-difference confidence intervals of all possible pairs of distributions.
+#' It contains MegDiffList[[1]],...,MegDiffList[[length(GroupList)]].
+#'
+#'The \code{MegDiffList} consists of the following variables
+#'
+#'\item{MegDiffList[[i]]}{ Mean-difference confidence intervals and related information of all categories that have higher means than sortedGroupList[i] category. If methodType = "bca", then MegDiffList[[i]] is an object of dabestr class that can be used to create the Gardner-Altman plot.}
+#'
 getMegDiffConfInv<-function(Values,Group,GroupList,bootT,alpha,methodType)
 {
   if(missing(bootT)) {
@@ -46,6 +62,24 @@ getMegDiffConfInv<-function(Values,Group,GroupList,bootT,alpha,methodType)
   return(list("MegDiffList"=MegDiffList))
 }
 
+#' bootDiffmeanFunc function
+#'
+#' bootDiffmeanFunc is a support function for bootstraping method.
+#' Its main task is to infer mean-difference confidence intervals of distributions for all categories except the first category in idx (idx[2],idx[3],...)  minus a target category (idx[1]).
+#'
+#'@param Values is a vector of real-number values
+#'@param Group is a vector of categories of each real number in Values
+#'@param idx is an order list of categories; idx[1] is a target category while others (idx[2],idx[3],...) are compared
+#' agaist idx[1] in order to compute mean-difference confidence intervals.
+#'@param reps is a number of time of sampling with replacement in a bootstrapping method.
+#'@param ci is a level of confidence interval inferred.
+#'@param methodType is a type of method for inferring confidence intervals. It is a paramter of two.boot function of simpleboot package.
+#'
+#'@return This function returns a list of mean-difference confidence intervals of categories idx[2],idx[3],... minus category idx[1].
+#'
+#'\code{result} a list of objects that contains mean-difference confidence intervals of pairs of distributions.
+#' It contains mean-difference confidence intervals of categories idx[2],idx[3],... minus category idx[1].
+#'
 bootDiffmeanFunc<-function(Group,Values,idx,reps,ci,methodType)
 {
   result<-c()

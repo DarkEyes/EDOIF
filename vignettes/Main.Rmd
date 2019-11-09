@@ -46,7 +46,6 @@ plot(A1)
 
 Text: Non-normal-Distribution Simulation & ordering inference   (running cell)
 ```{r}
-library(distr)
 library(EDOIF)
 # parameter setting
 bootT=1000

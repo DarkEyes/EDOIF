@@ -12,8 +12,7 @@ EDOIF(Values, Group, bootT, alpha, methodType)
 \item{Group}{is a vector of categories of each real number in Values}
 
 \item{bootT}{is a number of times of sample with replacement for bootstraping.
-The default is 1000.
- It must be above zero}
+The default is 1000. It must be above zero}
 
 \item{alpha}{is a significance level using in both confidence intervals and ordering inference it has the range [0,1].
 The default is 0.05.}
@@ -22,7 +21,7 @@ The default is 0.05.}
 The "perc" is the default option.}
 }
 \value{
-this class constructor returns an object of EDOIF class.
+This class constructor returns an object of EDOIF class.
 
 \code{obj} an object of EDOIF class that contains the results of ordering inference
 that can be print in text mode (print(obj)) or graphic mode (plot(obj)).
@@ -37,7 +36,7 @@ The \code{obj} consists of the following variables
 \item{confInvsList[i,]}{ The mean confidence interval of sortedGroupList[i] category. confInvsList[i,1] is a lower bound and confInvsList[i,2] is an upper bound. }
 \item{adjMat[i,j]}{ An element of adjacency matrix: one if sortedGroupList[j] category dominates sortedGroupList[i] using Mann-Whitney test, otherwise zero. }
 \item{pValMat[i,j]}{ A p-value of Mann-Whitney test for adjMat[i,j]. }
-\item{adjDiffMat[i,j]}{ A lower bound of confidence interval of difference mean for sortedGroupList[j] minus sortedGroupList[i] using methodType bootstrap. }
+\item{adjDiffMat[i,j]}{ A lower bound of confidence interval of mean difference for sortedGroupList[j] minus sortedGroupList[i] using methodType bootstrap. }
 \item{adjBootMat[i,j]}{ One if adjDiffMat[i,j] is positive, otherwise, zero. }
 }
 \description{

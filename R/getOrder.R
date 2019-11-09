@@ -1,4 +1,16 @@
-
+#' getOrder function
+#'
+#' getOrder is a support function for inferring a linear order of categories ascendingly sorted by their means.
+#'
+#'@param Values is a vector of real-number values
+#'@param Group is a vector of categories of each real number in Values
+#'
+#'@return This function returns an order list of categories.
+#'
+#'\item{sortedGroupList}{ The list of names of categories ascendingly ordered by their means. }
+#'\item{sortedmeanList}{ The list of means of categories that are ascendingly ordered. }
+#'
+#'
 getOrder<- function(Values,Group) {
   GroupList<-unique(Group)
   meanList<-c()
