@@ -2,7 +2,17 @@
 % Please edit documentation in R/EDOIF.R
 \name{EDOIF}
 \alias{EDOIF}
-\title{Empirical Distribution Ordering Inference Framework (EDOIF)}
+\title{Empirical Distribution Ordering Inference Framework (EDOIF)
+
+EDOIF is  non-parametric  framework  based on  Esitmation Statistics principle.
+Its main purpose is to infer orders of empirical distributions from different categories
+base on a probability of finding a value in one distribution that greater than the expectation
+of another distribution.
+
+ Given a set of ordered-pair of real-category values the framework is capable of
+ 1) inferring orders of  domination  of  categories  and  representing  orders  in  the form of a graph;
+ 2) estimating  magnitude  of  difference  between  a  pair  of categories in forms of confidence intervals; and
+ 3) visualizing  domination  orders  and  magnitudes  of  dif-ference of categories.}
 \usage{
 EDOIF(Values, Group, bootT, alpha, methodType)
 }
@@ -40,14 +50,18 @@ The \code{obj} consists of the following variables
 \item{adjBootMat[i,j]}{ One if adjDiffMat[i,j] is positive, otherwise, zero. }
 }
 \description{
+Empirical Distribution Ordering Inference Framework (EDOIF)
+
 EDOIF is  non-parametric  framework  based on  Esitmation Statistics principle.
 Its main purpose is to infer orders of empirical distributions from different categories
 base on a probability of finding a value in one distribution that greater than the expectation
 of another distribution.
-}
-\details{
-Given a set of ordered-pair of real-category values the framework is capable of
+
+ Given a set of ordered-pair of real-category values the framework is capable of
  1) inferring orders of  domination  of  categories  and  representing  orders  in  the form of a graph;
  2) estimating  magnitude  of  difference  between  a  pair  of categories in forms of confidence intervals; and
  3) visualizing  domination  orders  and  magnitudes  of  dif-ference of categories.
+}
+\author{
+Chainarong Amornbunchornvej, \email{chai@ieee.org}
 }

@@ -1,7 +1,7 @@
 
 #' @author Chainarong Amornbunchornvej, \email{chai@@ieee.org}
 #'
-#' Empirical Distribution Ordering Inference Framework (EDOIF)
+#' @title Empirical Distribution Ordering Inference Framework (EDOIF)
 #'
 #' EDOIF is  non-parametric  framework  based on  Esitmation Statistics principle.
 #' Its main purpose is to infer orders of empirical distributions from different categories
@@ -45,10 +45,13 @@
 #'@importFrom boot boot
 #'@import dabestr
 #'@importFrom simpleboot two.boot
-#'@import ellipsis
 #'@importFrom distr r UnivarMixingDistribution Unif Norm Cauchy
 #'@import igraph
 #'@import ggplot2
+#'@importFrom graphics plot
+#'@importFrom stats runif t.test wilcox.test
+#'
+#'@export
 
 EDOIF <- function(Values,Group,bootT,alpha,methodType) {
 
