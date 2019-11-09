@@ -22,7 +22,7 @@ printGraph<-function(sortedGroupList,confInvsList,sortedmeanList,adjMat)
 
   #edge_attr(g1, "label")<-out4$edgeNameList
 
-  igraph:: V(g1)$size <- 30*s(sortedmeanList)/max(sortedmeanList)
+  igraph:: V(g1)$size <- 30*abs(sortedmeanList)/max(sortedmeanList)
   plot(g1, layout =  layout.circle,edge.arrow.size=0.5,vertex.label.color = "black", vertex.label.dist=3)
 }
 
