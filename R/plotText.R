@@ -1,3 +1,9 @@
+#' print.EDOIF function
+#'
+#' print.EDOIF is a support function for printing results of orderining inference in text.
+#'
+#'@param obj is an object of EDOIF class that contains the results of ordering inference.
+#'
 print.EDOIF<-function(obj)
 {
   cat("EDOIF (Empirical Distribution Ordering Inference Framework) v1.0\n")

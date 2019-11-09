@@ -1,4 +1,6 @@
 
+#' @author Chainarong Amornbunchornvej, \email{chai@@ieee.org}
+#'
 #' Empirical Distribution Ordering Inference Framework (EDOIF)
 #'
 #' EDOIF is  non-parametric  framework  based on  Esitmation Statistics principle.
@@ -29,10 +31,10 @@
 #'
 #'\item{Values, Group}{ The main inputs of the framework. They are the double and character vectors respectively. }
 #'\item{bootT, alpha, methodType}{ The number of bootstrapping, significance level, and boostrapping method parameters. }
-#'\item{sortedGroupList}{ The list of names of categories ascendingly ordered by their means. }
-#'\item{sortedmeanList}{ The list of means of categories that are ascendingly ordered. }
-#'\item{MegDiffList[[i]]}{ The mean difference confidence intervals and related information of all categories that have higher means than sortedGroupList[i] category. If methodType = "bca", then MegDiffList[[i]] is an object of dabestr class that can be used to create the Gardner-Altman plot.}
-#'\item{confInvsList[i,]}{ The mean confidence interval of sortedGroupList[i] category. confInvsList[i,1] is a lower bound and confInvsList[i,2] is an upper bound. }
+#'\item{sortedGroupList}{ A list of names of categories ascendingly ordered by their means. }
+#'\item{sortedmeanList}{ A list of means of categories that are ascendingly ordered. }
+#'\item{MegDiffList[[i]]}{ Mean difference confidence intervals and related information of all categories that have higher means than sortedGroupList[i] category. If methodType = "bca", then MegDiffList[[i]] is an object of dabestr class that can be used to create the Gardner-Altman plot.}
+#'\item{confInvsList[i,]}{ A mean confidence interval of sortedGroupList[i] category. confInvsList[i,1] is a lower bound and confInvsList[i,2] is an upper bound. }
 #'\item{adjMat[i,j]}{ An element of adjacency matrix: one if sortedGroupList[j] category dominates sortedGroupList[i] using Mann-Whitney test, otherwise zero. }
 #'\item{pValMat[i,j]}{ A p-value of Mann-Whitney test for adjMat[i,j]. }
 #'\item{adjDiffMat[i,j]}{ A lower bound of confidence interval of mean difference for sortedGroupList[j] minus sortedGroupList[i] using methodType bootstrap. }

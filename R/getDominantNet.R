@@ -44,7 +44,7 @@ getDominantRADJ<-function(MegDiffList,methodType)
 #'@param GroupList is a list of names of categories ascendingly ordered by their means.
 #'@param alpha is a significance level using in both confidence intervals and ordering inference it has the range [0,1].
 #'
-#'@return This function returns an adjacency matrix of a dominant-distribution network \code{adjMat}
+#'@return This function returns an adjacency matrix of a dominant-distribution network \code{adjMat}.
 #' and the corresponding p-values of all category pairs.
 #'
 #'\item{adjMat[i,j]}{ An element of adjacency matrix: one if GroupList[j] category dominates GroupList[i] using Mann-Whitney test, otherwise zero. }

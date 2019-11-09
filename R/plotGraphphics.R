@@ -1,3 +1,12 @@
+#' printGraph function
+#'
+#' printGraph is a support function for printing a dominant-distribution network from an adjacency matrix.
+#'
+#'@param sortedGroupList is a list of names of categories ascendingly ordered by their means.
+#'@param confInvsList is a list of mean confidence intervals of all categories.
+#'@param sortedmeanList is a list of means of categories that are ascendingly ordered.
+#'@param adjMat is an adjacency matrix of dominant-distribution network
+#'
 printGraph<-function(sortedGroupList,confInvsList,sortedmeanList,adjMat)
 {
   N<-dim(confInvsList)[1]
@@ -13,9 +22,22 @@ printGraph<-function(sortedGroupList,confInvsList,sortedmeanList,adjMat)
 
   #edge_attr(g1, "label")<-out4$edgeNameList
 
-  igraph:: V(g1)$size <- 30*abs(sortedmeanList)/max(sortedmeanList)
+  igraph:: V(g1)$size <- 30*s(sortedmeanList)/max(sortedmeanList)
   plot(g1, layout =  layout.circle,edge.arrow.size=0.5,vertex.label.color = "black", vertex.label.dist=3)
 }
+
+#' plot.EDOIF function
+#'
+#' plot.EDOIF is a support function for printing all plots of EDOIF framework:
+#'  dominant-distribution network plot, mean CI plot, and mean-difference CI plot.
+#'
+#'@param obj is an object of EDOIF class that contains the results of ordering inference.
+#'@param NList is a list of based categories users want to have in mean-difference CI plot.
+#'@param options is an option of reporting EDOIF plot(s):
+#' 0 for reporting all plots, 1 for mean-difference CI plot, 2 for mean CI plot,
+#'  and 3 for dominant-distribution network plot.
+#'@param fontSize is a font size of text for all plots.
+#'
 plot.EDOIF<-function(obj,NList,options, fontSize)
 {
   N<-length(obj$MegDiffList)
