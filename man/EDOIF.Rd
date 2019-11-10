@@ -40,7 +40,7 @@ The \code{obj} consists of the following variables
 \item{adjBootMat[i,j]}{ One if adjDiffMat[i,j] is positive, otherwise, zero. }
 }
 \description{
-EDOIF is  non-parametric  framework  based on  Estimation Statistics principle.
+EDOIF is a non-parametric  framework  based on  Estimation Statistics principle.
 Its main purpose is to infer orders of empirical distributions from different categories
 base on a probability of finding a value in one distribution that greater than the expectation
 of another distribution.
