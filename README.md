@@ -19,7 +19,7 @@ Please call the following commands in R terminal.
 library(devtools)
 install_github('DarkEyes/EDOIF')
 ```
-If users cannot use "devtools" library, then users can use the following <a href="https://github.com/DarkEyes/EDOIF/blob/master/vignettes/EDOIF.single.R">link</a> to download the framework in the version of a single file and use the source("EDOIF.single.R") command before using the framework. 
+
 
 Example: Inferring orders of categories based on their empirical distributions 
 ----------------------------------------------------------------------------------
