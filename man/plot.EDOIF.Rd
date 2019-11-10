@@ -4,10 +4,12 @@
 \alias{plot.EDOIF}
 \title{plot.EDOIF function}
 \usage{
-\method{plot}{EDOIF}(obj, NList, options, fontSize)
+\method{plot}{EDOIF}(x, ..., NList, options, fontSize)
 }
 \arguments{
-\item{obj}{is an object of EDOIF class that contains the results of ordering inference.}
+\item{x}{is an object of EDOIF class that contains the results of ordering inference.}
+
+\item{...}{Signature for S3 generic function.}
 
 \item{NList}{is a list of based categories users want to have in mean-difference CI plot.}
 

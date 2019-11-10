@@ -9,7 +9,7 @@ getDominantRADJ(MegDiffList, methodType)
 \arguments{
 \item{MegDiffList}{is a list of objects that contains mean-difference confidence intervals inferred by getMegDiffConfInv function.}
 
-\item{methodType}{is an option for boostrapping methods:either  "perc" or "bca".}
+\item{methodType}{is an option for bootstrapping methods:either  "perc" or "bca".}
 }
 \value{
 This function returns an adjacency matrix of a dominant-distribution network \code{adjMat}

@@ -13,13 +13,13 @@ getMegDiffConfInv(Values, Group, GroupList, bootT, alpha, methodType)
 
 \item{GroupList}{is a list of names of categories ascendingly ordered by their means.}
 
-\item{bootT}{is a number of times of sample with replacement for bootstraping.
+\item{bootT}{is a number of times of sample with replacement for bootstrapping.
 The default is 1000. It must be above zero}
 
 \item{alpha}{is a significance level using in both confidence intervals and ordering inference it has the range [0,1].
 The default is 0.05.}
 
-\item{methodType}{is an option for boostrapping methods:either  "perc" or "bca".
+\item{methodType}{is an option for bootstrapping methods:either  "perc" or "bca".
 The "perc" is the default option.}
 }
 \value{
@@ -33,6 +33,6 @@ The \code{MegDiffList} consists of the following variables
 \item{MegDiffList[[i]]}{ Mean-difference confidence intervals and related information of all categories that have higher means than sortedGroupList[i] category. If methodType = "bca", then MegDiffList[[i]] is an object of dabestr class that can be used to create the Gardner-Altman plot.}
 }
 \description{
-getMegDiffConfInv is a support function for bootstraping method.
+getMegDiffConfInv is a support function for bootstrapping method.
 Its main purpose is to compute a mean-difference confidence intervals between all pair of distributions.
 }

@@ -15,6 +15,6 @@ meanBoot(data, indices)
 This function returns a mean of values in \code{data} that have values TRUE within \code{indices}.
 }
 \description{
-meanBoot is a support function for bootstraping method.
+meanBoot is a support function for bootstrapping method.
 Its main purpose is to compute a mean of a given samples from  \code{data} selected by  \code{indices}.
 }

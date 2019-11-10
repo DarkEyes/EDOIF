@@ -1,16 +1,16 @@
 #' getMegDiffConfInv function
 #'
-#' getMegDiffConfInv is a support function for bootstraping method.
+#' getMegDiffConfInv is a support function for bootstrapping method.
 #' Its main purpose is to compute a mean-difference confidence intervals between all pair of distributions.
 #'
 #'@param Values is a vector of real-number values
 #'@param Group is a vector of categories of each real number in Values
 #'@param GroupList is a list of names of categories ascendingly ordered by their means.
-#'@param bootT is a number of times of sample with replacement for bootstraping.
+#'@param bootT is a number of times of sample with replacement for bootstrapping.
 #'  The default is 1000. It must be above zero
 #'@param alpha is a significance level using in both confidence intervals and ordering inference it has the range [0,1].
 #'  The default is 0.05.
-#'@param methodType is an option for boostrapping methods:either  "perc" or "bca".
+#'@param methodType is an option for bootstrapping methods:either  "perc" or "bca".
 #'   The "perc" is the default option.
 #'@return This function returns a list of mean-difference confidence intervals.
 #'
@@ -64,16 +64,16 @@ getMegDiffConfInv<-function(Values,Group,GroupList,bootT,alpha,methodType)
 
 #' bootDiffmeanFunc function
 #'
-#' bootDiffmeanFunc is a support function for bootstraping method.
+#' bootDiffmeanFunc is a support function for bootstrapping method.
 #' Its main task is to infer mean-difference confidence intervals of distributions for all categories except the first category in idx (idx[2],idx[3],...)  minus a target category (idx[1]).
 #'
 #'@param Values is a vector of real-number values
 #'@param Group is a vector of categories of each real number in Values
 #'@param idx is an order list of categories; idx[1] is a target category while others (idx[2],idx[3],...) are compared
-#' agaist idx[1] in order to compute mean-difference confidence intervals.
+#' against idx[1] in order to compute mean-difference confidence intervals.
 #'@param reps is a number of time of sampling with replacement in a bootstrapping method.
 #'@param ci is a level of confidence interval inferred.
-#'@param methodType is a type of method for inferring confidence intervals. It is a paramter of two.boot function of simpleboot package.
+#'@param methodType is a type of method for inferring confidence intervals. It is a parameter of two.boot function of simpleboot package.
 #'
 #'@return This function returns a list of mean-difference confidence intervals of categories idx[2],idx[3],... minus category idx[1].
 #'

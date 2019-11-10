@@ -12,13 +12,13 @@ bootDiffmeanFunc(Group, Values, idx, reps, ci, methodType)
 \item{Values}{is a vector of real-number values}
 
 \item{idx}{is an order list of categories; idx[1] is a target category while others (idx[2],idx[3],...) are compared
-agaist idx[1] in order to compute mean-difference confidence intervals.}
+against idx[1] in order to compute mean-difference confidence intervals.}
 
 \item{reps}{is a number of time of sampling with replacement in a bootstrapping method.}
 
 \item{ci}{is a level of confidence interval inferred.}
 
-\item{methodType}{is a type of method for inferring confidence intervals. It is a paramter of two.boot function of simpleboot package.}
+\item{methodType}{is a type of method for inferring confidence intervals. It is a parameter of two.boot function of simpleboot package.}
 }
 \value{
 This function returns a list of mean-difference confidence intervals of categories idx[2],idx[3],... minus category idx[1].
@@ -27,6 +27,6 @@ This function returns a list of mean-difference confidence intervals of categori
 It contains mean-difference confidence intervals of categories idx[2],idx[3],... minus category idx[1].
 }
 \description{
-bootDiffmeanFunc is a support function for bootstraping method.
+bootDiffmeanFunc is a support function for bootstrapping method.
 Its main task is to infer mean-difference confidence intervals of distributions for all categories except the first category in idx (idx[2],idx[3],...)  minus a target category (idx[1]).
 }

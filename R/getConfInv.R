@@ -1,6 +1,6 @@
 #' meanBoot function
 #'
-#' meanBoot is a support function for bootstraping method.
+#' meanBoot is a support function for bootstrapping method.
 #' Its main purpose is to compute a mean of a given samples from  \code{data} selected by  \code{indices}.
 #'
 #'@param data is a vector of real-number values
@@ -15,17 +15,17 @@ meanBoot <- function(data, indices) {
 
 #' getConfInv function
 #'
-#' getConfInv is a support function for bootstraping method.
+#' getConfInv is a support function for bootstrapping method.
 #' Its main purpose is to compute a mean confidence intervals of all distributions.
 #'
 #'@param Values is a vector of real-number values
 #'@param Group is a vector of categories of each real number in Values
 #'@param GroupList is a list of names of categories ascendingly ordered by their means.
-#'@param bootT is a number of times of sample with replacement for bootstraping.
+#'@param bootT is a number of times of sample with replacement for bootstrapping.
 #'  The default is 1000. It must be above zero
 #'@param alpha is a significance level using in both confidence intervals and ordering inference it has the range [0,1].
 #'  The default is 0.05.
-#'@param methodType is an option for boostrapping methods:either  "perc" or "bca".
+#'@param methodType is an option for bootstrapping methods:either  "perc" or "bca".
 #'   The "perc" is the default option.
 #'
 #'@return This function returns a list of mean confidence intervals.

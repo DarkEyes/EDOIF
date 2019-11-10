@@ -4,11 +4,13 @@
 \alias{print.EDOIF}
 \title{print.EDOIF function}
 \usage{
-\method{print}{EDOIF}(obj)
+\method{print}{EDOIF}(x, ...)
 }
 \arguments{
-\item{obj}{is an object of EDOIF class that contains the results of ordering inference.}
+\item{x}{is an object of EDOIF class that contains the results of ordering inference.}
+
+\item{...}{Signature for S3 generic function.}
 }
 \description{
-print.EDOIF is a support function for printing results of orderining inference in text.
+print.EDOIF is a support function for printing results of ordering inference in text.
 }

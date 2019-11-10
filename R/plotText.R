@@ -3,13 +3,27 @@
 #'
 #' print.EDOIF function
 #'
-#' print.EDOIF is a support function for printing results of orderining inference in text.
+#' print.EDOIF is a support function for printing results of ordering inference in text.
 #'
-#'@param obj is an object of EDOIF class that contains the results of ordering inference.
+#'@param x is an object of EDOIF class that contains the results of ordering inference.
 #'
-#' @export print.EDOIF
-print.EDOIF<-function(obj)
+#'@param ... Signature for S3 generic function.
+#'
+#'@export
+#'
+print.EDOIF<-function(x, ...)
 {
+  ellipsis::check_dots_empty()
+
+  # =========== Check object class ===============
+  if (class(x)[1] != "EDOIF") {
+    stop(paste(
+      "An object is not a `EDOIF` class object.")
+    )
+  } else {
+    obj <- x
+  }
+
   cat("EDOIF (Empirical Distribution Ordering Inference Framework) v1.0\n")
   cat("=======================================================\n")
   cat(sprintf("Alpha = %f, Number of bootstrap resamples = %d, CI type = %s\n", obj$alpha,obj$bootT, obj$methodType) )

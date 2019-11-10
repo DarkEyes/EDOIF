@@ -31,15 +31,31 @@ printGraph<-function(sortedGroupList,confInvsList,sortedmeanList,adjMat)
 #' plot.EDOIF is a support function for printing all plots of EDOIF framework:
 #'  dominant-distribution network plot, mean CI plot, and mean-difference CI plot.
 #'
-#'@param obj is an object of EDOIF class that contains the results of ordering inference.
+#'@param x is an object of EDOIF class that contains the results of ordering inference.
 #'@param NList is a list of based categories users want to have in mean-difference CI plot.
 #'@param options is an option of reporting EDOIF plot(s):
 #' 0 for reporting all plots, 1 for mean-difference CI plot, 2 for mean CI plot,
 #'  and 3 for dominant-distribution network plot.
+#'
+#'@param ... Signature for S3 generic function.
+#'
 #'@param fontSize is a font size of text for all plots.
 #'
-plot.EDOIF<-function(obj,NList,options, fontSize)
+#'@export
+plot.EDOIF<-function(x, ... ,NList,options, fontSize)
 {
+  ellipsis::check_dots_empty()
+
+# =========== Check object class ===============
+  if (class(x)[1] != "EDOIF") {
+    stop(paste(
+      "An object is not a `EDOIF` class object.")
+    )
+  } else {
+    obj <- x
+  }
+
+
   N<-length(obj$MegDiffList)
   if(missing(NList)) {
     NList =  seq(1,N)

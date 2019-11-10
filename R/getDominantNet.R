@@ -3,7 +3,7 @@
 #' getDominantRADJ is a support function for inferring a dominant-distribution network using mean-difference confidence intervals.
 #'
 #'@param MegDiffList is a list of objects that contains mean-difference confidence intervals inferred by getMegDiffConfInv function.
-#'@param methodType is an option for boostrapping methods:either  "perc" or "bca".
+#'@param methodType is an option for bootstrapping methods:either  "perc" or "bca".
 #'
 #'@return This function returns an adjacency matrix of a dominant-distribution network \code{adjMat}
 #' and the corresponding lower-bound of mean difference CIs \code{adjDiffMat}.
