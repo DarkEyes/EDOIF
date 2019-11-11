@@ -13,7 +13,7 @@ EDOIF is a non-parametric  framework  based on  Estimation Statistics principle.
 
 Installation
 ------------
-Please call the following commands in R terminal.
+Please call the following command in R terminal.
 
 ``` r
 remotes::install_github("DarkEyes/EDOIF")
