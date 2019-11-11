@@ -16,10 +16,9 @@ Installation
 Please call the following commands in R terminal.
 
 ``` r
-library(devtools)
-install_github('DarkEyes/EDOIF')
+remotes::install_github("DarkEyes/EDOIF")
 ```
-
+This requires a user to install the "remotes" package before installing EDOIF.
 
 Example: Inferring orders of categories based on their empirical distributions 
 ----------------------------------------------------------------------------------
