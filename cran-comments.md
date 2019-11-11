@@ -5,3 +5,5 @@
 ## R CMD check results
 There were no ERRORs or WARNINGs. 
 
+## R-hub builder
+There were no ERRORs or WARNINGs

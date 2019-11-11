@@ -7,8 +7,8 @@ Authors@R:
            role = c("aut", "cre"),
            email = "grandca@gmail.com",
            comment = c(ORCID = "0000-0003-3131-0370"))
-Maintainer: C. Amornbunchornvej <grandca@gmail.com>
-Description: EDOIF is a non-parametric  framework  based on  Estimation Statistics principle. Its main purpose is to  infer orders of empirical distributions from different categories base on a probability of finding a value in one distribution that greater than the expectation of another distribution. Given a set of ordered-pair of real-category values the framework is capable of 1) inferring orders of  domination  of  categories  and  representing  orders  in  the form of a graph; 2) estimating  magnitude  of  difference  between  a  pair  of categories in forms of confidence intervals; and 3) visualizing  domination  orders  and  magnitudes  of  difference of categories.
+Maintainer: Chainarong Amornbunchornvej <grandca@gmail.com>
+Description: A non-parametric framework based on  Estimation Statistics principle. Its main purpose is to  infer orders of empirical distributions from different categories base on a probability of finding a value in one distribution that greater than the expectation of another distribution. Given a set of ordered-pair of real-category values the framework is capable of 1) inferring orders of  domination  of  categories  and  representing  orders  in  the form of a graph; 2) estimating  magnitude  of  difference  between  a  pair  of categories in forms of confidence intervals; and 3) visualizing  domination  orders  and  magnitudes  of  difference of categories.
 License: file LICENSE
 URL: https://github.com/DarkEyes/EDOIF
 BugReports: https://github.com/DarkEyes/EDOIF/issues
