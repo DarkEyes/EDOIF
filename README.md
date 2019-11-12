@@ -1,6 +1,6 @@
 Empirical Distribution Ordering Inference Framework (EDOIF)
 ===========================================================
-[![Travis CI build status](https://travis-ci.com/DarkEyes/EDOIF.svg?branch=master)](https://travis-ci.com/DarkEyes/EDOIF/)[![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)[![License](https://img.shields.io/badge/License-BSD%203--Clause--Clear-orange.svg)](https://spdx.org/licenses/BSD-3-Clause-Clear.html)
+[![Travis CI build status](https://travis-ci.com/DarkEyes/EDOIF.svg?branch=master)](https://travis-ci.com/DarkEyes/EDOIF/)[![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)[![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)](https://spdx.org/licenses/BSD-3-Clause.html)
 
 Given a dataset of careers and incomes, how large a difference of income between any pair of careers? Given a dataset of travel time records, how long do we need to spend more when choosing a public transportation mode A instead of B to travel? In this work, we developed a framework to solve these problems named "EDOIF".
 
