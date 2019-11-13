@@ -7,7 +7,7 @@
 ## R CMD check --as-cran results
 There were no ERRORs or WARNINGs. 
 
-Except that was one NOTE:
+Except there was one NOTE:
 
 New submission.
 
