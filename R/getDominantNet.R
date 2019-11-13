@@ -19,10 +19,8 @@ getDominantRADJ<-function(MegDiffList,methodType)
   adjDiffMat<-matrix(0,N,N)
   for(j in seq(1,N-1))
   {
-    if(methodType == "bca")
-      CIlowerBoundCurr<- MegDiffList[[j]]$result$bca_ci_low
-    else
-      CIlowerBoundCurr<- MegDiffList[[j]]$result$ci_low
+
+    CIlowerBoundCurr<- MegDiffList[[j]]$result$ci_low
     M<-length(CIlowerBoundCurr)
     for(i in seq(1,M))
     {
