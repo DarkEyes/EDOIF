@@ -20,7 +20,6 @@ Depends:
     boot
 Imports:
     distr,
-    dabestr,
     igraph,
     ellipsis,
     simpleboot,

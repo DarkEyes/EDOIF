@@ -1,0 +1,13 @@
+citHeader("To cite the 'EDOIF' package in publications use:")
+
+citEntry(entry       = "Misc",
+         title       = "A nonparametric framework for inferring orders of categorical data from category-real ordered pairs.",
+         author      = personList(as.person("Chainarong Amornbunchornvej"),
+                        as.person("Navaporn Surasvadi"),
+                        as.person("Anon Plangprasopchok"),
+                        as.person("Suttipong Thajchayapong")
+                        ),
+         year        = "2019",
+         url         = "https://www.arXiv.org/abs/",
+         textVersion = "A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. (2019) Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, and Suttipong Thajchayapong. arXiv preprint, arXiv:1911.0xxxx."
+         )

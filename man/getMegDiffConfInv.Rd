@@ -30,7 +30,7 @@ It contains MegDiffList[[1]],...,MegDiffList[[length(GroupList)]].
 
 The \code{MegDiffList} consists of the following variables
 
-\item{MegDiffList[[i]]}{ Mean-difference confidence intervals and related information of all categories that have higher means than sortedGroupList[i] category. If methodType = "bca", then MegDiffList[[i]] is an object of dabestr class that can be used to create the Gardner-Altman plot.}
+\item{MegDiffList[[i]]}{ Mean-difference confidence intervals and related information of all categories that have higher means than sortedGroupList[i] category.}
 }
 \description{
 getMegDiffConfInv is a support function for bootstrapping method.

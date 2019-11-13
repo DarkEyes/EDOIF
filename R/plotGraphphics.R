@@ -85,16 +85,10 @@ plot.EDOIF<-function(x, ... ,NList,options, fontSize)
   #============== plot Interval
   for(j in NList)
   {
-    if(obj$methodType == "bca")
-    {
-      CILB<- obj$MegDiffList[[j]]$result$bca_ci_low
-      CIUB<- obj$MegDiffList[[j]]$result$bca_ci_high
-    }
-    else
-    {
-      CILB<- obj$MegDiffList[[j]]$result$ci_low
-      CIUB<- obj$MegDiffList[[j]]$result$ci_high
-    }
+
+    CILB<- obj$MegDiffList[[j]]$result$ci_low
+    CIUB<- obj$MegDiffList[[j]]$result$ci_high
+
     m<-length(CILB)
     meanDiff<-obj$MegDiffList[[j]]$result$difference
     mXlist<-c(mXlist,j:N+1)
@@ -142,8 +136,7 @@ plot.EDOIF<-function(x, ... ,NList,options, fontSize)
     plot(p2)
   }
   #==============
-  if(obj$methodType == "bca")
-    plot(obj$MegDiffList[[1]])
+
   if(options ==3 || options ==0)
   {
     printGraph(obj$sortedGroupList,obj$confInvsList,obj$sortedmeanList,obj$adjMat)
