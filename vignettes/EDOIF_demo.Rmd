@@ -61,7 +61,7 @@ plot(A1,options =2)
 ```
 The third plot is a dominant-distribution network.
 ```{r Fig3, echo=TRUE, fig.height=5, fig.width=7}
-plot(A1,options =3)
+out<-plot(A1,options =3)
 ```
 
 # EXAMPLE#2 Non-normal-Distribution Simulation & ordering inference

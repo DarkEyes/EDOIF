@@ -71,59 +71,61 @@ plot(A1, fontSize=15) # print the results in graphic mode
 **Text mode results**
 
 ```
-EDOIF (Empirical Distribution Ordering Inference Framework) v1.0
+EDOIF (Empirical Distribution Ordering Inference Framework) v0.1.0
 =======================================================
 Alpha = 0.050000, Number of bootstrap resamples = 1000, CI type = perc
-Distribution: Category1
-Mean:10.303180 95CI:[ 9.010756,11.544846]
-Distribution: Category2
-Mean:14.943284 95CI:[ 13.663984,16.192841]
-Distribution: Category4
-Mean:49.787612 95CI:[ 48.450130,51.048998]
-Distribution: Category3
-Mean:69.758789 95CI:[ 68.508522,71.063775]
-Distribution: Category5
-Mean:90.304677 95CI:[ 88.869291,91.766059]
+Using Mann-Whitney test to report whether A ≺ B
+A dominant-distribution network density:0.900000
+Distribution: C1
+Mean:9.403081 95CI:[ 7.943062,10.886054]
+Distribution: C2
+Mean:10.793221 95CI:[ 9.322045,12.275161]
+Distribution: C3
+Mean:49.551156 95CI:[ 48.177049,51.039258]
+Distribution: C4
+Mean:69.328283 95CI:[ 67.836297,70.803232]
+Distribution: C5
+Mean:89.713031 95CI:[ 88.133896,91.266592]
 =======================================================
-Mean difference of Category2 (n=150) minus Category1 (n=150): Category1 ≺ Category2
- :p-val 0.0000
-Mean Diff:4.640104 95CI:[ 2.781606,6.526985]
+Mean difference of C2 (n=100) minus C1 (n=100): C1 ⊀ C2
+ :p-val 0.1282
+Mean Diff:1.390141 95CI:[ -0.767363,3.359817]
 
-Mean difference of Category4 (n=150) minus Category1 (n=150): Category1 ≺ Category4
+Mean difference of C3 (n=100) minus C1 (n=100): C1 ≺ C3
  :p-val 0.0000
-Mean Diff:39.484432 95CI:[ 37.539067,41.208513]
+Mean Diff:40.148076 95CI:[ 38.081515,42.079406]
 
-Mean difference of Category3 (n=150) minus Category1 (n=150): Category1 ≺ Category3
+Mean difference of C4 (n=100) minus C1 (n=100): C1 ≺ C4
  :p-val 0.0000
-Mean Diff:59.455610 95CI:[ 57.621261,61.317352]
+Mean Diff:59.925203 95CI:[ 57.909290,62.081954]
 
-Mean difference of Category5 (n=150) minus Category1 (n=150): Category1 ≺ Category5
+Mean difference of C5 (n=100) minus C1 (n=100): C1 ≺ C5
  :p-val 0.0000
-Mean Diff:80.001497 95CI:[ 78.041890,81.912140]
+Mean Diff:80.309950 95CI:[ 78.172896,82.411290]
 
-Mean difference of Category4 (n=150) minus Category2 (n=150): Category2 ≺ Category4
+Mean difference of C3 (n=100) minus C2 (n=100): C2 ≺ C3
  :p-val 0.0000
-Mean Diff:34.844328 95CI:[ 32.965199,36.628192]
+Mean Diff:38.757935 95CI:[ 36.706719,40.771157]
 
-Mean difference of Category3 (n=150) minus Category2 (n=150): Category2 ≺ Category3
+Mean difference of C4 (n=100) minus C2 (n=100): C2 ≺ C4
  :p-val 0.0000
-Mean Diff:54.815505 95CI:[ 52.982562,56.667855]
+Mean Diff:58.535062 95CI:[ 56.389398,60.730171]
 
-Mean difference of Category5 (n=150) minus Category2 (n=150): Category2 ≺ Category5
+Mean difference of C5 (n=100) minus C2 (n=100): C2 ≺ C5
  :p-val 0.0000
-Mean Diff:75.361393 95CI:[ 73.553524,77.262215]
+Mean Diff:78.919810 95CI:[ 76.617883,80.863333]
 
-Mean difference of Category3 (n=150) minus Category4 (n=150): Category4 ≺ Category3
+Mean difference of C4 (n=100) minus C3 (n=100): C3 ≺ C4
  :p-val 0.0000
-Mean Diff:19.971178 95CI:[ 18.087240,21.732644]
+Mean Diff:19.777127 95CI:[ 17.769473,21.850950]
 
-Mean difference of Category5 (n=150) minus Category4 (n=150): Category4 ≺ Category5
+Mean difference of C5 (n=100) minus C3 (n=100): C3 ≺ C5
  :p-val 0.0000
-Mean Diff:40.517065 95CI:[ 38.650440,42.503114]
+Mean Diff:40.161875 95CI:[ 38.072241,42.040509]
 
-Mean difference of Category5 (n=150) minus Category3 (n=150): Category3 ≺ Category5
+Mean difference of C5 (n=100) minus C4 (n=100): C4 ≺ C5
  :p-val 0.0000
-Mean Diff:20.545888 95CI:[ 18.774437,22.396629]
+Mean Diff:20.384748 95CI:[ 18.300014,22.516306]
 
 ```
 Contact
