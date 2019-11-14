@@ -74,8 +74,9 @@ EDOIF <- function(Values,Group,bootT,alpha,methodType) {
   out4<-getDominantRADJ(out3$MegDiffList,methodType)
   out5<-getWilcoxDominantRADJ(Values,Group,GroupList = out1$sortedGroupList,alpha)
   netDen<-getADJNetDen(out5$adjMat)
+  gObj<-getiGraphOBJ(out5$adjMat,out1$sortedGroupList)
 
-  value <- list(bootT = bootT, alpha = alpha, Values = Values,Group=Group,netDen=netDen,adjDiffMat=out4$adjDiffMat, sortedGroupList=out1$sortedGroupList,MegDiffList=out3$MegDiffList, sortedmeanList=out1$sortedmeanList,confInvsList=out2$confInvsList, adjMat=out5$adjMat, adjBootMat=out4$adjMat, methodType=methodType,pValMat=out5$pValMat)
+  value <- list(bootT = bootT, alpha = alpha, Values = Values,Group=Group,gObj=gObj,netDen=netDen,adjDiffMat=out4$adjDiffMat, sortedGroupList=out1$sortedGroupList,MegDiffList=out3$MegDiffList, sortedmeanList=out1$sortedmeanList,confInvsList=out2$confInvsList, adjMat=out5$adjMat, adjBootMat=out4$adjMat, methodType=methodType,pValMat=out5$pValMat)
   attr(value, 'class') <- 'EDOIF'
   value
 }

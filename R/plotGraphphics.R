@@ -33,13 +33,8 @@ plotGraph<-function(obj,rankFlag)
     }
   }
 
-  for(i in seq(1,N))
-  {
-    nameList[i]<-sprintf("%s",sortedGroupList[i])
-  }
   g1 <- graph_from_adjacency_matrix( adjMat   ) %>%
-    set_vertex_attr("label", value = nameList)
-
+    set_vertex_attr("label", value = sortedGroupList)
 
   igraph:: V(g1)$size <- 30*abs(sortedmeanList)/max(sortedmeanList)
   plot(g1, layout =  layout.circle,vertex.label.color = "black", vertex.label.dist=3)

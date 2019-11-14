@@ -27,3 +27,19 @@ getADJNetDen<-function(adjMat)
   netDen<-sum(adjMat)/(n*(n-1)/2)
   return(netDen)
 }
+
+#' getiGraphOBJ function
+#'
+#' getiGraphOBJ is a support function for converting a dominant-distribution network adjacency matrix to an iGraph object.
+#'
+#' @param adjMat is an adjacency matrix of a dominant-distribution network.
+#' @param sortedGroupList is a list of names of categories ascendingly ordered by their means.
+#'
+#' @return This function returns an iGraph object of a dominant-distribution network for a given adjMat.
+#'
+getiGraphOBJ<-function(adjMat,sortedGroupList)
+{
+  g1 <- graph_from_adjacency_matrix( adjMat   ) %>%
+    set_vertex_attr("label", value = sortedGroupList)
+  return(g1)
+}
