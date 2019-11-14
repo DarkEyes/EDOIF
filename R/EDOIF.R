@@ -40,6 +40,7 @@
 #'\item{pValMat[i,j]}{ A p-value of Mann-Whitney test for adjMat[i,j]. }
 #'\item{adjDiffMat[i,j]}{ A lower bound of confidence interval of mean difference for sortedGroupList[j] minus sortedGroupList[i] using methodType bootstrap. }
 #'\item{adjBootMat[i,j]}{ One if adjDiffMat[i,j] is positive, otherwise, zero. }
+#'\item{netDen}{ A network density of dominant-distribution network derived from \code{adjMat}.}
 #'
 #'@exportPattern "^[^\\.]"
 #'@importFrom boot boot.ci
@@ -72,8 +73,9 @@ EDOIF <- function(Values,Group,bootT,alpha,methodType) {
   out3<-getMegDiffConfInv(Values,Group,out1$sortedGroupList,bootT=bootT,alpha=alpha, methodType=methodType)
   out4<-getDominantRADJ(out3$MegDiffList,methodType)
   out5<-getWilcoxDominantRADJ(Values,Group,GroupList = out1$sortedGroupList,alpha)
+  netDen<-getADJNetDen(out5$adjMat)
 
-  value <- list(bootT = bootT, alpha = alpha, Values = Values,Group=Group,adjDiffMat=out4$adjDiffMat, sortedGroupList=out1$sortedGroupList,MegDiffList=out3$MegDiffList, sortedmeanList=out1$sortedmeanList,confInvsList=out2$confInvsList, adjMat=out5$adjMat, adjBootMat=out4$adjMat, methodType=methodType,pValMat=out5$pValMat)
+  value <- list(bootT = bootT, alpha = alpha, Values = Values,Group=Group,netDen=netDen,adjDiffMat=out4$adjDiffMat, sortedGroupList=out1$sortedGroupList,MegDiffList=out3$MegDiffList, sortedmeanList=out1$sortedmeanList,confInvsList=out2$confInvsList, adjMat=out5$adjMat, adjBootMat=out4$adjMat, methodType=methodType,pValMat=out5$pValMat)
   attr(value, 'class') <- 'EDOIF'
   value
 }

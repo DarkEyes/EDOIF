@@ -28,7 +28,7 @@ print.EDOIF<-function(x, ...)
   cat("=======================================================\n")
   cat(sprintf("Alpha = %f, Number of bootstrap resamples = %d, CI type = %s\n", obj$alpha,obj$bootT, obj$methodType) )
   cat(sprintf("Using Mann-Whitney test to report whether A \U227A B\n"))
-  cat(sprintf("A dominant-distribution network density:%f\n",getADJNetDen(obj$adjMat)))
+  cat(sprintf("A dominant-distribution network density:%f\n",obj$netDen) )
   N<-dim(obj$confInvsList)[1]
   for(i in seq(1,N))
   {
