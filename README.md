@@ -38,11 +38,11 @@ std=8
 simData1<-c()
 simData1$Values<-rnorm(nInv,mean=initMean,sd=std)
 simData1$Group<-rep(c("Category1"),times=nInv)
-simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+5,sd=std) )
+simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean,sd=std) )
 simData1$Group<-c(simData1$Group,rep(c("Category2"),times=nInv))
-simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+3*stepMean,sd=std) )
-simData1$Group<-c(simData1$Group,rep(c("Category3"),times=nInv) )
 simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+2*stepMean,sd=std) )
+simData1$Group<-c(simData1$Group,rep(c("Category3"),times=nInv) )
+simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+3*stepMean,sd=std) )
 simData1$Group<-c(simData1$Group, rep(c("Category4"),times=nInv) )
 simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+4*stepMean,sd=std) )
 simData1$Group<-c(simData1$Group, rep(c("Category5"),times=nInv) )
@@ -56,7 +56,7 @@ A1<-EDOIF(simData1$Values,simData1$Group, bootT=bootT, alpha=alpha, methodType =
 
 #== Visualizing results
 print(A1) # print the results in text mode
-plot(A1, fontSize=15) # print the results in graphic mode
+plot(A1, fontSize=10) # print the results in graphic mode
 ```
 **Graphic mode results**
 1. An alpha-confidence-interval of mean plot for five categories. The horizontal axis represents categories and the vertical axis represents values within distributions of categories.
@@ -76,56 +76,56 @@ EDOIF (Empirical Distribution Ordering Inference Framework) v0.1.0
 Alpha = 0.050000, Number of bootstrap resamples = 1000, CI type = perc
 Using Mann-Whitney test to report whether A ≺ B
 A dominant-distribution network density:0.900000
-Distribution: C1
-Mean:9.403081 95CI:[ 7.943062,10.886054]
-Distribution: C2
-Mean:10.793221 95CI:[ 9.322045,12.275161]
-Distribution: C3
-Mean:49.551156 95CI:[ 48.177049,51.039258]
-Distribution: C4
-Mean:69.328283 95CI:[ 67.836297,70.803232]
-Distribution: C5
-Mean:89.713031 95CI:[ 88.133896,91.266592]
+Distribution: Category1
+Mean:10.840671 95CI:[ 9.706981,12.014179]
+Distribution: Category2
+Mean:11.044785 95CI:[ 9.806991,12.446037]
+Distribution: Category3
+Mean:50.462935 95CI:[ 49.208005,51.757706]
+Distribution: Category4
+Mean:70.299726 95CI:[ 69.103924,71.502505]
+Distribution: Category5
+Mean:91.190505 95CI:[ 89.895480,92.518455]
 =======================================================
-Mean difference of C2 (n=100) minus C1 (n=100): C1 ⊀ C2
- :p-val 0.1282
-Mean Diff:1.390141 95CI:[ -0.767363,3.359817]
+Mean difference of Category2 (n=150) minus Category1 (n=150): Category1 ⊀ Category2
+ :p-val 0.4463
+Mean Diff:0.204114 95CI:[ -1.545130,1.930609]
 
-Mean difference of C3 (n=100) minus C1 (n=100): C1 ≺ C3
+Mean difference of Category3 (n=150) minus Category1 (n=150): Category1 ≺ Category3
  :p-val 0.0000
-Mean Diff:40.148076 95CI:[ 38.081515,42.079406]
+Mean Diff:39.622264 95CI:[ 37.984831,41.378232]
 
-Mean difference of C4 (n=100) minus C1 (n=100): C1 ≺ C4
+Mean difference of Category4 (n=150) minus Category1 (n=150): Category1 ≺ Category4
  :p-val 0.0000
-Mean Diff:59.925203 95CI:[ 57.909290,62.081954]
+Mean Diff:59.459055 95CI:[ 57.921328,61.127817]
 
-Mean difference of C5 (n=100) minus C1 (n=100): C1 ≺ C5
+Mean difference of Category5 (n=150) minus Category1 (n=150): Category1 ≺ Category5
  :p-val 0.0000
-Mean Diff:80.309950 95CI:[ 78.172896,82.411290]
+Mean Diff:80.349835 95CI:[ 78.620391,82.133270]
 
-Mean difference of C3 (n=100) minus C2 (n=100): C2 ≺ C3
+Mean difference of Category3 (n=150) minus Category2 (n=150): Category2 ≺ Category3
  :p-val 0.0000
-Mean Diff:38.757935 95CI:[ 36.706719,40.771157]
+Mean Diff:39.418150 95CI:[ 37.543210,41.241722]
 
-Mean difference of C4 (n=100) minus C2 (n=100): C2 ≺ C4
+Mean difference of Category4 (n=150) minus Category2 (n=150): Category2 ≺ Category4
  :p-val 0.0000
-Mean Diff:58.535062 95CI:[ 56.389398,60.730171]
+Mean Diff:59.254941 95CI:[ 57.304359,61.098774]
 
-Mean difference of C5 (n=100) minus C2 (n=100): C2 ≺ C5
+Mean difference of Category5 (n=150) minus Category2 (n=150): Category2 ≺ Category5
  :p-val 0.0000
-Mean Diff:78.919810 95CI:[ 76.617883,80.863333]
+Mean Diff:80.145720 95CI:[ 78.313321,82.040234]
 
-Mean difference of C4 (n=100) minus C3 (n=100): C3 ≺ C4
+Mean difference of Category4 (n=150) minus Category3 (n=150): Category3 ≺ Category4
  :p-val 0.0000
-Mean Diff:19.777127 95CI:[ 17.769473,21.850950]
+Mean Diff:19.836791 95CI:[ 18.047421,21.762239]
 
-Mean difference of C5 (n=100) minus C3 (n=100): C3 ≺ C5
+Mean difference of Category5 (n=150) minus Category3 (n=150): Category3 ≺ Category5
  :p-val 0.0000
-Mean Diff:40.161875 95CI:[ 38.072241,42.040509]
+Mean Diff:40.727570 95CI:[ 39.004372,42.627946]
 
-Mean difference of C5 (n=100) minus C4 (n=100): C4 ≺ C5
+Mean difference of Category5 (n=150) minus Category4 (n=150): Category4 ≺ Category5
  :p-val 0.0000
-Mean Diff:20.384748 95CI:[ 18.300014,22.516306]
+Mean Diff:20.890780 95CI:[ 19.079287,22.625807]
 
 ```
 Contact
