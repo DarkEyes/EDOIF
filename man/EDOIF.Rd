@@ -39,6 +39,7 @@ The \code{obj} consists of the following variables
 \item{adjDiffMat[i,j]}{ A lower bound of confidence interval of mean difference for sortedGroupList[j] minus sortedGroupList[i] using methodType bootstrap. }
 \item{adjBootMat[i,j]}{ One if adjDiffMat[i,j] is positive, otherwise, zero. }
 \item{netDen}{ A network density of dominant-distribution network derived from \code{adjMat}.}
+\item{gObj}{An object of iGraph of a dominant-distribution network. }
 }
 \description{
 EDOIF is a non-parametric  framework  based on  Estimation Statistics principle.
