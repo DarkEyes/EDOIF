@@ -130,7 +130,7 @@ Mean Diff:20.890780 95CI:[ 19.079287,22.625807]
 ```
 Citation
 ----------------------------------------------------------------------------------
-Chainarong Amornbunchornvej, Navaporn Surasvadi,Anon Plangprasopchok, and Suttipong Thajchayapong (2019). A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. arXiv preprint arXiv:1911.06723. <a href="https://arxiv.org/abs/1911.06723">link</a>
+Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, and Suttipong Thajchayapong (2019). A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. arXiv preprint arXiv:1911.06723. <a href="https://arxiv.org/abs/1911.06723">link</a>
 
 Contact
 ----------------------------------------------------------------------------------
