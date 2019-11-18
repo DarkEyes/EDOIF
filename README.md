@@ -128,6 +128,11 @@ Mean difference of Category5 (n=150) minus Category4 (n=150): Category4 ≺ Cate
 Mean Diff:20.890780 95CI:[ 19.079287,22.625807]
 
 ```
+Citation
+=========
+To cite the 'EDOIF' package in publications use: 
+
+Chainarong Amornbunchornvej, Navaporn Surasvadi,Anon Plangprasopchok, and Suttipong Thajchayapong (2019). A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. arXiv preprint arXiv:1911.06723. <a href="https://arxiv.org/abs/1911.06723"> link </a>
 Contact
 =========
 - Developer: C. Amornbunchornvej<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-3131-0370" href="https://orcid.org/0000-0003-3131-0370" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-3131-0370</a></div>
