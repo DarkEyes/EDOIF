@@ -17,3 +17,17 @@ This function returns an iGraph object of a dominant-distribution network for a 
 \description{
 getiGraphOBJ is a support function for converting a dominant-distribution network adjacency matrix to an iGraph object.
 }
+\examples{
+# Generate simulation data with 100 samples per categories
+
+simData<-SimNonNormalDist(nInv=100)
+
+# Performing ordering infernce from simData
+
+resultObj<-EDOIF(simData$Values,simData$Group)
+
+# Get an iGraph object from an adjacency matrix
+
+igraphObj<-getiGraphOBJ(adjMat=resultObj$adjMat,sortedGroupList=resultObj$sortedGroupList)
+
+}

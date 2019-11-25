@@ -6,6 +6,21 @@
 #'
 #' @return This function returns a value of network density of of a dominant-distribution network for a given object g.
 #'
+#' @examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Get a network density of an iGraph object
+#'
+#' getiGraphNetDen(g=resultObj$gObj)
+#'
+#'@export
+#'
 getiGraphNetDen<-function(g)
 {
   n<-length(igraph::V(g))
@@ -20,6 +35,21 @@ getiGraphNetDen<-function(g)
 #' @param adjMat is an adjacency matrix of a dominant-distribution network.
 #'
 #' @return This function returns a value of network density of of a dominant-distribution network for a given adjMat.
+#'
+#' @examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Get a network density of an adjacency matrix
+#'
+#' getADJNetDen(adjMat=resultObj$adjMat)
+#'
+#'@export
 #'
 getADJNetDen<-function(adjMat)
 {
@@ -36,6 +66,21 @@ getADJNetDen<-function(adjMat)
 #' @param sortedGroupList is a list of names of categories ascendingly ordered by their means.
 #'
 #' @return This function returns an iGraph object of a dominant-distribution network for a given adjMat.
+#'
+#' @examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Get an iGraph object from an adjacency matrix
+#'
+#' igraphObj<-getiGraphOBJ(adjMat=resultObj$adjMat,sortedGroupList=resultObj$sortedGroupList)
+#'
+#'@export
 #'
 getiGraphOBJ<-function(adjMat,sortedGroupList)
 {

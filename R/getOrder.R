@@ -5,11 +5,21 @@
 #'@param Values is a vector of real-number values
 #'@param Group is a vector of categories of each real number in Values
 #'
-#'@return This function returns an order list of categories.
+#'@return This function returns two lists: an order list of categories \code{sortedGroupList}
+#'and its correspoding list of means \code{sortedmeanList}.
 #'
 #'\item{sortedGroupList}{ The list of names of categories ascendingly ordered by their means. }
 #'\item{sortedmeanList}{ The list of means of categories that are ascendingly ordered. }
 #'
+#'@examples
+#'# Generate simulation data
+#'
+#'simData<-SimNonNormalDist(nInv=100,noisePer=0.1)
+#'
+#'# Call the function to get the sorted lists
+#'getOrder(Values=simData$Values,Group=simData$Group)
+#'
+#'@export
 #'
 getOrder<- function(Values,Group) {
   GroupList<-unique(Group)
@@ -22,9 +32,6 @@ getOrder<- function(Values,Group) {
   sortedInx<-order(meanList)
   sortedGroupList<-GroupList[sortedInx]
   sortedmeanList<-meanList[sortedInx]
-  for(i in seq(2,length(sortedmeanList)) )
-  {
-    sortedMeanRatioList<-c(sortedMeanRatioList,sortedmeanList[i-1]/sortedmeanList[i])
-  }
-  return(list("sortedGroupList"=sortedGroupList,"sortedmeanList"=sortedmeanList,"sortedMeanRatioList"=sortedMeanRatioList))
+
+  return(list("sortedGroupList"=sortedGroupList,"sortedmeanList"=sortedmeanList))
 }

@@ -4,7 +4,7 @@
 \alias{checkSim3Res}
 \title{checkSim3Res function}
 \usage{
-checkSim3Res(adjMat, flag)
+checkSim3Res(adjMat, flag = 0)
 }
 \arguments{
 \item{adjMat}{is an adjacency matrix of inferred a dominant-distribution network.}
@@ -17,4 +17,18 @@ This function returns precision, recall, and F1-score of inferred adjacency matr
 \description{
 checkSim3Res is a support function for checking whether an adjacency matrix of inferred
 a dominant-distribution network \code{adjMat} is corrected w.r.t. generator SimNonNormalDist().
+}
+\examples{
+# Generate simulation data with 100 samples per categories
+
+simData<-SimNonNormalDist(nInv=100)
+
+# Performing ordering infernce from simData
+
+resultObj<-EDOIF(simData$Values,simData$Group)
+
+# Compare the inferred adjacency matrix with the ground truth
+
+checkSim3Res(adjMat=resultObj$adjMat)
+
 }

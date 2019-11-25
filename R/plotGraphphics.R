@@ -5,16 +5,27 @@
 #' @param obj is an object of EDOIF class that contains the results of ordering inference.
 #' @param rankFlag is an option for including ranks of categories with in the plot: default is TRUE for including ranks.
 #'
-#' @return This function returns an object of iGraph for a dominant-distribution network and its plot variable.
+#' @return This function returns a list of an object of iGraph for a dominant-distribution network and its plot variable.
 #'
 #'\item{graphVar}{ An object of iGraph for a dominant-distribution network }
 #'
-plotGraph<-function(obj,rankFlag)
+#' @examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Plot a dominant-distribution network and return a list of an iGraph object
+#'
+#' iGraphList<-plotGraph(obj=resultObj)
+#'
+#'@export
+#'
+plotGraph<-function(obj,rankFlag=TRUE)
 {
-  if(missing(rankFlag))
-  {
-    rankFlag=TRUE
-  }
 
   sortedGroupList<-obj$sortedGroupList
   confInvsList<-obj$confInvsList
@@ -50,20 +61,32 @@ plotGraph<-function(obj,rankFlag)
 #' @param rankFlag is an option for including ranks of categories with in the plot: default is TRUE for including ranks.
 #' @param fontSize is a font size of text for all plots.
 #'
-#' @return This function returns an object of ggplot class.
+#' @return This function returns a list of an object of ggplot class.
 #'
-#'\item{pDiffCI}{ An object of ggplot class containing the plot of difference-mean confidence intervals }
+#'\item{pDiffCI}{ An object of ggplot class containing the plot of mean-difference confidence intervals }
 #'
-plotMeanDiffCIs<-function(obj,NList,fontSize,rankFlag)
+#' @examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Get a list of ggplot object of mean-difference confidence intervals
+#'
+#' ggplotList<-plotMeanDiffCIs(obj=resultObj)
+#'
+#' # Plot mean-difference confidence intervals
+#'
+#' plot(ggplotList$pDiffCI)
+#'
+#'@export
+#'
+#'
+plotMeanDiffCIs<-function(obj,NList,fontSize=15,rankFlag=TRUE)
 {
-  if(missing(fontSize))
-  {
-    fontSize=15
-  }
-  if(missing(rankFlag))
-  {
-    rankFlag=TRUE
-  }
   N<-length(obj$MegDiffList)
   if(missing(NList)) {
     NList =  seq(1,N)
@@ -122,20 +145,32 @@ plotMeanDiffCIs<-function(obj,NList,fontSize,rankFlag)
 #' @param rankFlag is an option for including ranks of categories with in the plot: default is TRUE for including ranks.
 #' @param fontSize is a font size of text for all plots.
 #'
-#' @return This function returns an object of ggplot class.
+#' @return This function returns a list of an object of ggplot class.
 #'
 #'\item{pMeanCI}{ An object of ggplot class containing the plot of mean confidence intervals }
 #'
-plotMeanCIs<-function(obj,fontSize,rankFlag)
+#' @examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Get a list of ggplot object of mean confidence intervals
+#'
+#' ggplotList<-plotMeanCIs(obj=resultObj)
+#'
+#' # Plot mean confidence intervals
+#'
+#' plot(ggplotList$pMeanCI)
+#'
+#'@export
+#'
+#'
+plotMeanCIs<-function(obj,fontSize=15,rankFlag=TRUE)
 {
-  if(missing(fontSize))
-  {
-    fontSize=15
-  }
-  if(missing(rankFlag))
-  {
-    rankFlag=TRUE
-  }
 
   if(rankFlag == TRUE)
   {

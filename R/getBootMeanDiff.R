@@ -12,6 +12,7 @@
 #'  The default is 0.05.
 #'@param methodType is an option for bootstrapping methods:either  "perc" or "bca".
 #'   The "perc" is the default option.
+#'
 #'@return This function returns a list of mean-difference confidence intervals.
 #'
 #'\code{MegDiffList} a list of objects that contains mean-difference confidence intervals of all possible pairs of distributions.

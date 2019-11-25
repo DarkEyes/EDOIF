@@ -15,3 +15,17 @@ This function returns a value of network density of of a dominant-distribution n
 \description{
 getiGraphNetDen is a support function for calculating a network density of a dominant-distribution network.
 }
+\examples{
+# Generate simulation data with 100 samples per categories
+
+simData<-SimNonNormalDist(nInv=100)
+
+# Performing ordering infernce from simData
+
+resultObj<-EDOIF(simData$Values,simData$Group)
+
+# Get a network density of an iGraph object
+
+getiGraphNetDen(g=resultObj$gObj)
+
+}

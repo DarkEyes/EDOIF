@@ -4,7 +4,7 @@
 \alias{plotMeanDiffCIs}
 \title{plotMeanDiffCIs function}
 \usage{
-plotMeanDiffCIs(obj, NList, fontSize, rankFlag)
+plotMeanDiffCIs(obj, NList, fontSize = 15, rankFlag = TRUE)
 }
 \arguments{
 \item{obj}{is an object of EDOIF class that contains the results of ordering inference.}
@@ -16,10 +16,28 @@ plotMeanDiffCIs(obj, NList, fontSize, rankFlag)
 \item{rankFlag}{is an option for including ranks of categories with in the plot: default is TRUE for including ranks.}
 }
 \value{
-This function returns an object of ggplot class.
+This function returns a list of an object of ggplot class.
 
-\item{pDiffCI}{ An object of ggplot class containing the plot of difference-mean confidence intervals }
+\item{pDiffCI}{ An object of ggplot class containing the plot of mean-difference confidence intervals }
 }
 \description{
 plotMeanDiffCIs is a support function for plotting difference-mean confidence intervals.
+}
+\examples{
+# Generate simulation data with 100 samples per categories
+
+simData<-SimNonNormalDist(nInv=100)
+
+# Performing ordering infernce from simData
+
+resultObj<-EDOIF(simData$Values,simData$Group)
+
+# Get a list of ggplot object of mean-difference confidence intervals
+
+ggplotList<-plotMeanDiffCIs(obj=resultObj)
+
+# Plot mean-difference confidence intervals
+
+plot(ggplotList$pDiffCI)
+
 }

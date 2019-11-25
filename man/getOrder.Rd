@@ -12,11 +12,21 @@ getOrder(Values, Group)
 \item{Group}{is a vector of categories of each real number in Values}
 }
 \value{
-This function returns an order list of categories.
+This function returns two lists: an order list of categories \code{sortedGroupList}
+and its correspoding list of means \code{sortedmeanList}.
 
 \item{sortedGroupList}{ The list of names of categories ascendingly ordered by their means. }
 \item{sortedmeanList}{ The list of means of categories that are ascendingly ordered. }
 }
 \description{
 getOrder is a support function for inferring a linear order of categories ascendingly sorted by their means.
+}
+\examples{
+# Generate simulation data
+
+simData<-SimNonNormalDist(nInv=100,noisePer=0.1)
+
+# Call the function to get the sorted lists
+getOrder(Values=simData$Values,Group=simData$Group)
+
 }
