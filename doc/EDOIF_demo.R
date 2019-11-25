@@ -1,4 +1,4 @@
-## ----create.data, message=FALSE------------------------------------------
+## ----create.data, message=FALSE-----------------------------------------------
 # Simulation section
 nInv<-100
 initMean=10
@@ -16,7 +16,7 @@ simData1$Group<-c(simData1$Group, rep(c("C4"),times=nInv) )
 simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+4*stepMean,sd=std) )
 simData1$Group<-c(simData1$Group, rep(c("C5"),times=nInv) )
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 # Simple ordering inference section
 library(EDOIF)
 # parameter setting
@@ -29,19 +29,19 @@ Group=simData1$Group
 #=============
 A1<-EDOIF(Values,Group)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 print(A1) # print results in text
 
-## ----Fig1, echo=TRUE, fig.height=5, fig.width=7--------------------------
+## ----Fig1, echo=TRUE, fig.height=5, fig.width=7-------------------------------
 plot(A1,options =1)
 
-## ----Fig2, echo=TRUE, fig.height=5, fig.width=7--------------------------
+## ----Fig2, echo=TRUE, fig.height=5, fig.width=7-------------------------------
 plot(A1,options =2)
 
-## ----Fig3, echo=TRUE, fig.height=5, fig.width=7--------------------------
-plot(A1,options =3)
+## ----Fig3, echo=TRUE, fig.height=5, fig.width=7-------------------------------
+out<-plot(A1,options =3)
 
-## ----Fig4, echo=TRUE, fig.height=5, fig.width=7, message=FALSE-----------
+## ----Fig4, echo=TRUE, fig.height=5, fig.width=7, message=FALSE----------------
 library(EDOIF)
 # parameter setting
 bootT=1000
@@ -60,7 +60,7 @@ plot(A3)
 end_time <- Sys.time()
 end_time - start_time
 
-## ----Fig5, echo=TRUE, fig.height=5, fig.width=7, message=FALSE-----------
+## ----Fig5, echo=TRUE, fig.height=5, fig.width=7, message=FALSE----------------
 library(ggplot2)
 
 nInv<-1000

@@ -23,3 +23,18 @@
 plot.EDOIF is a support function for printing all plots of EDOIF framework:
  dominant-distribution network plot, mean CI plot, and mean-difference CI plot.
 }
+\examples{
+# Generate simulation data with 100 samples per categories
+
+simData<-SimNonNormalDist(nInv=100)
+
+# Performing ordering infernce from simData
+
+resultObj<-EDOIF(simData$Values,simData$Group)
+
+# Plot results in graphic mode
+
+plot(resultObj)
+
+
+}

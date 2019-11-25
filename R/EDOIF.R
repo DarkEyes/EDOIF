@@ -43,6 +43,43 @@
 #'\item{netDen}{ A network density of dominant-distribution network derived from \code{adjMat}.}
 #'\item{gObj}{An object of iGraph of a dominant-distribution network. }
 #'
+#'
+#' @examples
+#' # Generate simulation data
+#'nInv<-100
+#'initMean=10
+#'stepMean=20
+#'std=8
+#'simData1<-c()
+#'simData1$Values<-rnorm(nInv,mean=initMean,sd=std)
+#'simData1$Group<-rep(c("C1"),times=nInv)
+#'simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean,sd=std) )
+#'simData1$Group<-c(simData1$Group,rep(c("C2"),times=nInv))
+#'simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+2*stepMean,sd=std) )
+#'simData1$Group<-c(simData1$Group,rep(c("C3"),times=nInv) )
+#'simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+3*stepMean,sd=std) )
+#'simData1$Group<-c(simData1$Group, rep(c("C4"),times=nInv) )
+#'simData1$Values<-c(simData1$Values,rnorm(nInv,mean=initMean+4*stepMean,sd=std) )
+#'simData1$Group<-c(simData1$Group, rep(c("C5"),times=nInv) )
+#'
+#' # Performing ordering infernce from simData1
+#'
+#' resultObj<-EDOIF(simData1$Values,simData1$Group)
+#'
+#' # Print results in text mode
+#'
+#' print(resultObj)
+#'
+#' # Plot results in graphic mode
+#'
+#' plot(resultObj)
+#'
+#' @seealso
+#'
+#' Run \code{vignette("EDOIF_demo", package = "EDOIF")} in a terminal to learn more details about how to use our package.
+#'
+#'
+#'
 #'@exportPattern "^[^\\.]"
 #'@importFrom boot boot.ci
 #'@importFrom boot boot

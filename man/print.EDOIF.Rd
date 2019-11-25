@@ -14,3 +14,18 @@
 \description{
 print.EDOIF is a support function for printing results of ordering inference in text.
 }
+\examples{
+# Generate simulation data with 100 samples per categories
+
+simData<-SimNonNormalDist(nInv=100)
+
+# Performing ordering infernce from simData
+
+resultObj<-EDOIF(simData$Values,simData$Group)
+
+# Print results in text mode
+
+print(resultObj)
+
+
+}

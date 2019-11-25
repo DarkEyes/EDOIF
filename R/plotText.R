@@ -1,6 +1,3 @@
-#'
-#'
-#'
 #' print.EDOIF function
 #'
 #' print.EDOIF is a support function for printing results of ordering inference in text.
@@ -8,6 +5,21 @@
 #'@param x is an object of EDOIF class that contains the results of ordering inference.
 #'
 #'@param ... Signature for S3 generic function.
+#'
+#'
+#' @examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Print results in text mode
+#'
+#' print(resultObj)
+#'
 #'
 #'@export
 #'
@@ -24,7 +36,7 @@ print.EDOIF<-function(x, ...)
     obj <- x
   }
 
-  cat("EDOIF (Empirical Distribution Ordering Inference Framework) v0.1.0\n")
+  cat("EDOIF (Empirical Distribution Ordering Inference Framework)\n")
   cat("=======================================================\n")
   cat(sprintf("Alpha = %f, Number of bootstrap resamples = %d, CI type = %s\n", obj$alpha,obj$bootT, obj$methodType) )
   cat(sprintf("Using Mann-Whitney test to report whether A \U227A B\n"))

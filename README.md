@@ -71,7 +71,7 @@ plot(A1, fontSize=10) # print the results in graphic mode
 **Text mode results**
 
 ```
-EDOIF (Empirical Distribution Ordering Inference Framework) v0.1.0
+EDOIF (Empirical Distribution Ordering Inference Framework)
 =======================================================
 Alpha = 0.050000, Number of bootstrap resamples = 1000, CI type = perc
 Using Mann-Whitney test to report whether A ≺ B

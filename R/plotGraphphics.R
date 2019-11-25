@@ -179,6 +179,20 @@ plotMeanCIs<-function(obj,fontSize,rankFlag)
 #'
 #'@param fontSize is a font size of text for all plots.
 #'
+#'@examples
+#' # Generate simulation data with 100 samples per categories
+#'
+#' simData<-SimNonNormalDist(nInv=100)
+#'
+#' # Performing ordering infernce from simData
+#'
+#' resultObj<-EDOIF(simData$Values,simData$Group)
+#'
+#' # Plot results in graphic mode
+#'
+#' plot(resultObj)
+#'
+#'
 #'@export
 plot.EDOIF<-function(x, ... ,NList,options, fontSize)
 {

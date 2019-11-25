@@ -1,6 +1,6 @@
 ^EDOIF\.Rproj$
 ^\.Rproj\.user$
-^doc$
-^Meta$
 ^cran-comments\.md$
 ^\.travis\.yml$
+^doc$
+^Meta$
