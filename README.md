@@ -1,6 +1,11 @@
 Empirical Distribution Ordering Inference Framework (EDOIF)
 ===========================================================
-[![Travis CI build status](https://travis-ci.com/DarkEyes/EDOIF.svg?branch=master)](https://travis-ci.com/DarkEyes/EDOIF/)[![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/) [![CRAN Status Badge](https://www.r-pkg.org/badges/version-last-release/EDOIF)](https://cran.r-project.org/package=EDOIF) [![Download](https://cranlogs.r-pkg.org/badges/grand-total/EDOIF)](https://cran.r-project.org/package=EDOIF)[![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)](https://spdx.org/licenses/BSD-3-Clause.html)
+[![Travis CI build status](https://travis-ci.com/DarkEyes/EDOIF.svg?branch=master)](https://travis-ci.com/DarkEyes/EDOIF/)
+[![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
+[![CRAN Status Badge](https://www.r-pkg.org/badges/version-last-release/EDOIF)](https://cran.r-project.org/package=EDOIF)
+[![Download](https://cranlogs.r-pkg.org/badges/grand-total/EDOIF)](https://cran.r-project.org/package=EDOIF)
+[![arXiv](https://img.shields.io/badge/stat.ME-arXiv%3A1911.06723-B31B1B.svg)](https://arxiv.org/abs/1911.06723/)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)](https://spdx.org/licenses/BSD-3-Clause.html)
 
 Given a dataset of careers and incomes, how large a difference of income between any pair of careers would be? Given a dataset of travel time records, how long do we need to spend more when choosing a public transportation mode A instead of B to travel?  In this work, we developed a framework to solve these problems named "EDOIF".
 
