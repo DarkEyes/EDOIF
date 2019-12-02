@@ -134,6 +134,8 @@ Mean difference of Category5 (n=150) minus Category4 (n=150): Category4 ≺ Cate
 Mean Diff:20.890780 95CI:[ 19.079287,22.625807]
 
 ```
+For more examples, please see <a href="https://cran.r-project.org/web/packages/EDOIF/vignettes/EDOIF_demo.html"> link </a>.
+
 Citation
 ----------------------------------------------------------------------------------
 Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, and Suttipong Thajchayapong (2019). A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. arXiv preprint arXiv:1911.06723. <a href="https://arxiv.org/abs/1911.06723">link</a>
