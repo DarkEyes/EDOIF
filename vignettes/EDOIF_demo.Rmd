@@ -54,7 +54,7 @@ The first plot is the plot of mean-difference confidence intervals
 plot(A1,options =1)
 ```
 
-The second plot is the plot of mean-difference confidence intervals 
+The second plot is the plot of mean confidence intervals 
 ```{r Fig2, echo=TRUE, fig.height=5, fig.width=7}
 plot(A1,options =2)
 ```
