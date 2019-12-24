@@ -9,5 +9,5 @@ citEntry(entry       = "Misc",
                         ),
          year        = "2019",
          url         = "https://arxiv.org/abs/1911.06723",
-         textVersion = "A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. (2019) Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, and Suttipong Thajchayapong. arXiv preprint, arXiv:1911.06723."
+         textVersion = "Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, and Suttipong Thajchayapong (2019). A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. arXiv preprint, arXiv:1911.06723."
          )
