@@ -1,13 +1,20 @@
 citHeader("To cite the 'EDOIF' package in publications use:")
 
-citEntry(entry       = "Misc",
+citEntry(entry       = "article",
          title       = "A nonparametric framework for inferring orders of categorical data from category-real ordered pairs.",
          author      = personList(as.person("Chainarong Amornbunchornvej"),
                         as.person("Navaporn Surasvadi"),
                         as.person("Anon Plangprasopchok"),
                         as.person("Suttipong Thajchayapong")
                         ),
-         year        = "2019",
-         url         = "https://arxiv.org/abs/1911.06723",
-         textVersion = "Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, and Suttipong Thajchayapong (2019). A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. arXiv preprint, arXiv:1911.06723."
+         journal     =  "Heliyon",
+         publisher   =  "Cell press",
+         volume      =  "6",
+         number      =  "11",
+         year        = "2020",
+         pages       = "e05435",
+         doi         = "10.1016/j.heliyon.2020.e05435",
+         url         = "https://doi.org/10.1016/j.heliyon.2020.e05435",
+         textVersion = "Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, and Suttipong Thajchayapong (2020). A nonparametric framework for inferring orders of categorical data from category-real ordered pairs. Heliyon,
+6(11), e05435."
          )

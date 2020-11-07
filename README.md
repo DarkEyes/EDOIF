@@ -4,7 +4,7 @@ Empirical Distribution Ordering Inference Framework (EDOIF)
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version-last-release/EDOIF)](https://cran.r-project.org/package=EDOIF)
 [![Download](https://cranlogs.r-pkg.org/badges/grand-total/EDOIF)](https://cran.r-project.org/package=EDOIF)
-[![arXiv](https://img.shields.io/badge/stat.ME-arXiv%3A1911.06723-B31B1B.svg)](https://arxiv.org/abs/1911.06723/)
+[![arXiv](https://img.shields.io/badge/stat.ME-arXiv%3A1911.06723-B31B1B.svg)](https://arxiv.org/abs/1911.06723)
 [![](https://img.shields.io/badge/doi-10.1016%2Fj.heliyon.2020.e05435-yellow)](https://doi.org/10.1016/j.heliyon.2020.e05435 )
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-orange.svg)](https://spdx.org/licenses/BSD-3-Clause.html)
 
@@ -140,7 +140,7 @@ Mean difference of Category5 (n=150) minus Category4 (n=150): Category4 ≺ Cate
 Mean Diff:20.890780 95CI:[ 19.079287,22.625807]
 
 ```
-For more examples, please see <a href="https://cran.r-project.org/web/packages/EDOIF/vignettes/EDOIF_demo.html"> link </a>.
+For more examples, please see the vignettes in this <a href="https://cran.r-project.org/package=EDOIF"> link </a>.
 
 Citation
 ----------------------------------------------------------------------------------

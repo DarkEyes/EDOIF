@@ -1,3 +1,5 @@
+# EDOIF v0.1.2
+* Updated citation and tested the package on R Under development (unstable) v.4.1   
 # EDOIF v0.1.1
 * Updated examples and fixed typos as well as fixed minor bugs
 # EDOIF v0.1.0
