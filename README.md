@@ -144,9 +144,9 @@ For more examples, please see <a href="https://cran.r-project.org/web/packages/E
 
 Citation
 ----------------------------------------------------------------------------------
-Chainarong Amornbunchornvej, Navaporn Surasvadi, Anon Plangprasopchok, Suttipong Thajchayapong, 
-A nonparametric framework for inferring orders of categorical data from category-real pairs,
-Heliyon, Volume 6, Issue 11, 2020, e05435, ISSN 2405-8440,
+Amornbunchornvej, Chainarong, Navaporn Surasvadi, Anon Plangprasopchok, Suttipong Thajchayapong. 
+"A nonparametric framework for inferring orders of categorical data from category-real pairs."
+Heliyon 6, no. 11 (2020): e05435, ISSN 2405-8440,
 <a href="https://doi.org/10.1016/j.heliyon.2020.e05435">https://doi.org/10.1016/j.heliyon.2020.e05435.</a> <a href="https://arxiv.org/abs/1911.06723">arXiv</a>
 
 Contact
