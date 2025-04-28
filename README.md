@@ -1,6 +1,5 @@
 Empirical Distribution Ordering Inference Framework (EDOIF)
 ===========================================================
-[![Travis CI build status](https://travis-ci.com/DarkEyes/EDOIF.svg?branch=master)](https://travis-ci.com/DarkEyes/EDOIF/)
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version-last-release/EDOIF)](https://cran.r-project.org/package=EDOIF)
 [![Download](https://cranlogs.r-pkg.org/badges/grand-total/EDOIF)](https://cran.r-project.org/package=EDOIF)
@@ -152,5 +151,5 @@ Heliyon 6, no. 11 (2020): e05435, ISSN 2405-8440,
 Contact
 ----------------------------------------------------------------------------------
 - Developer: C. Amornbunchornvej<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-3131-0370" href="https://orcid.org/0000-0003-3131-0370" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-3131-0370</a></div>
-- <a href="https://www.nectec.or.th/en/research/dsaru/dsarg-sai.html">Strategic Analytics Networks with Machine Learning and AI (SAI)</a>, <a href="https://www.nectec.or.th/en/">NECTEC</a>, Thailand
+- <a href="https://www.nectec.or.th/en/research/dsarg/dsarg-sai.html">Strategic Analytics Networks with Machine Learning and AI (SAI)</a>, <a href="https://www.nectec.or.th/en/">NECTEC</a>, Thailand
 - Homepage: <a href="https://sites.google.com/view/amornbunchornvej/home">Link</a>

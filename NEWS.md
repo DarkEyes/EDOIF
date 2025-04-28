@@ -1,3 +1,5 @@
+# EDOIF v0.1.4
+* Updated the citation format
 # EDOIF v0.1.3
 * Updated the lazy data loading
 # EDOIF v0.1.2
